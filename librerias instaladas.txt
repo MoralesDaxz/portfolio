@@ -1,0 +1,8 @@
+EN USO
+
+npm i react-type-animation
+npm install framer-motion
+
+SIN USO
+npm install --save aos@next
+npm i --save-dev @types/aos
