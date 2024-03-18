@@ -33,7 +33,7 @@ console.log(closeModal);
             }
         }
     }
-    const styleSM = 'absolute bg-[black] text-white w-[80%] z-10 h-screen self-end flex flex-col justify-around items-center gap-4 py-3 px-3 '
+    const styleSM = 'bgGradient absolute text-bondiBlue-50 w-full z-10 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 '
     return (
         <>
             <AnimatePresence>
@@ -45,7 +45,7 @@ console.log(closeModal);
                     initial={'hidden'}
                     animate={'visible'}
                 >
-                    <Image className='absolute top-3 right-3 cursor-pointer' onClick={() => setCloseModal(true)} src={close} width={30} height={30} alt='close'/>
+                    <Image className='absolute top-3 right-3 cursor-pointer' onClick={() => setCloseModal(true)} src={close} width={30} height={30} alt='close' title='close'/>
                     {route.map((item, index) => { return <Link key={index} href={item.link}>{item.title}</Link> })}
                 </motion.div> }
                 

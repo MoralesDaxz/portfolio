@@ -43,37 +43,46 @@ const NavBar = () => {
         { link: '/contacto', title: 'Contacto' },
         { link: '/habilidades', title: 'Habilidades' },]
 
-    const styleMD = 'fixed rounded-xl border border-blue-950 h-auto flex justify-around gap-10 mt-5 py-3 px-3'
-    const styleHidden = 'hidden'
+    const styleMD = 'z-10 w-full fixed top-0 py-4 flex justify-center items-start gap-20'
     const [controlWidth, setControlWidth] = useState('')
     const [closeModal, setCloseModal] = useState(true)
-
-    const checkDisplay = () => {
+    const [bgNavBar, setBgNavBar] = useState(false)
+    const checkWidthDisplay = () => {
         return window.innerWidth < 640 ? setControlWidth('SM') : setControlWidth('MD')
+    }
+    const checkScrollDisplay =()=>{
+        if (window.scrollY > 40) {
+          return  setBgNavBar(true);
+          } else {
+           return setBgNavBar(false);
+          }
     }
 
     useEffect(() => {
-        checkDisplay()
-        window.addEventListener('resize', () => checkDisplay())
-        return window.removeEventListener('resize', () => checkDisplay())
+        checkScrollDisplay()
+        checkWidthDisplay()
+        window.addEventListener('resize', () => checkWidthDisplay())
+        window.addEventListener('scroll', () => checkScrollDisplay())
+        return (
+            window.removeEventListener('resize', () => checkWidthDisplay()),
+            window.removeEventListener('resize', () => checkScrollDisplay())
+            )
     }, [])
 
     return (
         < >
-            <AnimatePresence>
-                <Link className='absolute top-3 left-3 z-10' href={'/'}>
-                    <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={30} height={30} alt='menu' />
-                </Link>
-                {controlWidth === 'MD' ?
-                    <motion.div
-                        className={styleMD}
-                        variants={container}
-                        initial={'hidden'}
-                        animate={'visible'}
-                    >
-                        {route.map((item, index) => { return <Link key={index} href={item.link}>{item.title}</Link> })}
-                    </motion.div> : <Aside closeModal={closeModal} setCloseModal={setCloseModal} />}
-            </AnimatePresence>
+            <Link className='absolute top-3 left-3 z-20' href={'/'}>
+                <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
+            </Link>
+            {controlWidth === 'MD' ?
+                <motion.div
+                    className={bgNavBar?`bg-[#02171fad] py-4 backdrop-blur-sm ${styleMD}`:styleMD}
+                    variants={container}
+                    initial={'hidden'}
+                    animate={'visible'}>
+                    {route.map((item, index) => { return <Link className='text-base font-semibold shadow-bottom transition-all duration-400 text-bondiBlue-100 hover:bg-bondiBlue-950 z-10 rounded-md border-2 border-blue-200 px-5 py-4 cursor-pointer' key={index} href={item.link}>{item.title}</Link> })}
+                </motion.div> :
+                <Aside closeModal={closeModal} setCloseModal={setCloseModal} />}
         </>
     )
 }

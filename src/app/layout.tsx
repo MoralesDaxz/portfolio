@@ -1,7 +1,7 @@
-
-
+import Head from "next/head";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+
 
 export default function RootLayout({
   children,
@@ -19,14 +19,14 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:image" content="https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
       </head>
 
-      <body className="min-w-[330px] min-h-screen flex flex-col items-center scroll-smooth">
+      <body className="bgGradient w-full min-w-[330px] scroll-smooth">
         <NavBar />
-        <main >
           {children}
-        </main>
-
       </body>
     </html>
   );

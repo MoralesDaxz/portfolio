@@ -1,14 +1,20 @@
 'use client'
+import "./globals.css";
 import React from 'react'
 import Hero from '../components/Hero'
 import { AnimatePresence } from 'framer-motion'
-import NavBar from '@/components/NavBar'
+import BackgroundStars from "@/components/BackgroundStars";
 
 const Page = () => {
   return (
-    <>
-      <Hero />
-    </>
+    <div className="w-full min-h-screen">
+      <BackgroundStars />
+      <AnimatePresence>
+        <Hero />
+      </AnimatePresence>
+
+    </div>
+
   )
 }
 
