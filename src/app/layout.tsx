@@ -1,6 +1,7 @@
-import Head from "next/head";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+
 
 
 export default function RootLayout({
@@ -23,10 +24,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
       </head>
-
-      <body className="bgGradient w-full min-w-[330px] scroll-smooth">
+      <body className="bgGradient w-full min-h-screen scroll-smooth">
         <NavBar />
-          {children}
+        {children}
+        <Footer />
       </body>
     </html>
   );
