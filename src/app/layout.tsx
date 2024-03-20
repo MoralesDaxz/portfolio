@@ -2,8 +2,6 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +22,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
       </head>
-      <body className="bgGradient w-full min-h-screen scroll-smooth">
+      <body>
         <NavBar />
         {children}
         <Footer />

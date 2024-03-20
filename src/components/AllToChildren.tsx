@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import Link from 'next/link';
 import Hero from './Hero';
 import Test3 from './Test3';
@@ -71,4 +71,4 @@ const AllToChildren = () => {
     )
 }
 
-export default AllToChildren
+export default AllToChildren */

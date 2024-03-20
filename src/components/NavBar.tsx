@@ -4,8 +4,9 @@ import React, { FC, ReactElement, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Aside } from './Aside'
 import Image from 'next/image'
+import { container } from '@/utils/motionVariables'
 
-const container = {
+/* const container = {
     hidden: {
         opacity: 0,
         y: 15
@@ -36,7 +37,7 @@ const nextMotionItems = {
             stiffness: 300
         },
     }
-}
+} */
 const NavBar = () => {
     const route = [
         { link: '/proyectos', title: 'Proyectos' },
@@ -44,7 +45,7 @@ const NavBar = () => {
         { link: '/contacto', title: 'Contacto' },
     ]
 
-    const styleMD = 'z-10 w-full fixed top-0 py-4 flex justify-center items-start gap-20'
+    const styleMD = 'z-10 w-full fixed top-2 py-6 flex justify-center items-start sm:gap-10 md:gap-20'
     const [controlWidth, setControlWidth] = useState('')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
@@ -52,13 +53,13 @@ const NavBar = () => {
         return window.innerWidth < 640 ? setControlWidth('SM') : setControlWidth('MD')
     }
     const checkScrollDisplay = () => {
-        window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
+        return window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
     }
 
     useEffect(() => {
         checkScrollDisplay()
         checkWidthDisplay()
-        
+
         window.addEventListener('resize', () => checkWidthDisplay())
         window.addEventListener('scroll', () => checkScrollDisplay())
         return (
@@ -69,19 +70,18 @@ const NavBar = () => {
 
     return (
         < >
-
-            <Link className='absolute top-3 left-3 z-20' href={'/'}>
-                <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
-            </Link>
             {controlWidth === 'MD' ?
                 <motion.div
                     className={bgNavBar ? `z-20 bg-[#02171fad] py-4 backdrop-blur-sm ${styleMD}` : styleMD}
                     variants={container}
                     initial={'hidden'}
                     animate={'visible'}>
+                    <Link className='absolute top-[25%] left-8 z-20' href={'/'}>
+                        <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
+                    </Link>
                     {route.map((item, index) => { return <Link className=' text-base sm:text-lg lg:text-xl font-medium shadow-bottom transition-all duration-400 text-[white] opacity-80 hover:opacity-100 hover:bg-bondiBlue-950 z-10 rounded-md border-[3px] border-blue-200  hover:border-blue-100 px-5 py-4 cursor-pointer' key={index} href={item.link}>{item.title}</Link> })}
                 </motion.div> :
-                <Aside closeModal={closeModal} setCloseModal={setCloseModal} />}
+                <Aside closeModal={closeModal} controlWidth={controlWidth} setCloseModal={setCloseModal} />}
         </>
     )
 }
