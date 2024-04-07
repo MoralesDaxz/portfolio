@@ -8,10 +8,10 @@ import BackgroundStars from "@/components/BackgroundStars";
 const Home = () => {
   return (
   <main>
-    <AnimatePresence>
+
       <BackgroundStars />
       <Hero />
-    </AnimatePresence>
+  
   </main>
   )
 }
