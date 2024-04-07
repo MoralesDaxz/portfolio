@@ -12,6 +12,16 @@ const nextConfig = {
             hostname: 'i.ibb.co',
             pathname: '/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'media.licdn.com',
+            pathname: '/**',
+          },
+          {
+            protocol: 'https',
+            hostname: 'coffeedealtura.netlify.app',
+            pathname: '/**',
+          },
         ],
       },
 };

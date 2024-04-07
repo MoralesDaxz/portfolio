@@ -42,7 +42,7 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
                     <Link className='' href={'/'}>
                         <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
                     </Link>
-                    <Image priority className='opacity-80 ' onClick={() => setCloseModal(false)}  src={menu} color='#ebffff' width={40} height={40} alt='menu'/>
+                    <Image priority className='opacity-80 z-10' onClick={() => setCloseModal(false)}  src={menu} color='#ebffff' width={40} height={40} alt='menu'/>
                 </div>
                  :<motion.div
                     className={styleSM}

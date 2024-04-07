@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.paleta {
+          /* 50: '#ebffff',  */    color: #ebffff;
+          /* 100: '#cefcff', */    color: #cefcff;
+          /* 200: '#a2f7ff', */    color: #a2f7ff;/* text  */
+          /* 300: '#63eefd', */    color: #63eefd;
+          /* 400: '#1cdcf4', */    color: #1cdcf4;
+          /* 500: '#00bfda', */    color: #00bfda;
+          /* 600: '#0398b7', */    color: #0398b7;/* Escoge en UI de pagina  */
+          /* 700: '#0a7994', */    color: #0a7994;
+          /* 800: '#126178', */    color: #126178;
+          /* 900: '#145165', */    color: #145165;
+          /* 950: '#063546', */    color: #063546;
+}
 
 :root {
   font-family: 'Outfit', sans-serif;
@@ -46,12 +59,37 @@ body {
 }
 
 /* Title Navbar */
-.shadow-bottom:hover{-webkit-animation:shadow-drop-tb .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-tb .4s cubic-bezier(.25,.46,.45,.94) both}
+.shadow-bottom:hover {
+  -webkit-animation: shadow-drop-tb .4s cubic-bezier(.25, .46, .45, .94) both;
+  animation: shadow-drop-tb .4s cubic-bezier(.25, .46, .45, .94) both
+}
 
- @-webkit-keyframes shadow-drop-tb{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:0 -12px 20px -12px rgba(0,0,0,.35),0 12px 20px -12px rgba(42, 200, 240, 0.596);box-shadow:0 -12px 20px -12px rgba(42, 200, 240, 0.596),0 12px 20px -12px rgba(42, 200, 240, 0.596)}}@keyframes shadow-drop-tb{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:0 -12px 20px -12px rgba(42, 200, 240, 0.596),0 12px 20px -12px rgba(42, 200, 240, 0.596);box-shadow:0 -12px 20px -12px rgba(42, 200, 240, 0.596),0 12px 20px -12px rgba(42, 200, 240, 0.596)}}
+@-webkit-keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent
+  }
 
- /*Aside */
-.bgGradient{
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, .35), 0 12px 20px -12px rgba(42, 200, 240, 0.596);
+    box-shadow: 0 -12px 20px -12px rgba(42, 200, 240, 0.596), 0 12px 20px -12px rgba(42, 200, 240, 0.596)
+  }
+}
+
+@keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent
+  }
+
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(42, 200, 240, 0.596), 0 12px 20px -12px rgba(42, 200, 240, 0.596);
+    box-shadow: 0 -12px 20px -12px rgba(42, 200, 240, 0.596), 0 12px 20px -12px rgba(42, 200, 240, 0.596)
+  }
+}
+
+/*Aside */
+.bgGradient {
   background-image: linear-gradient(0deg, #000000 4%, rgba(2, 23, 31, 0.87) 79%);
 }
 

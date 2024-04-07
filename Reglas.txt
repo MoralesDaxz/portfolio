@@ -1,0 +1,5 @@
+Titulos - NavBar
+text-base sm:text-lg lg:text-xl font-medium
+
+Hover
+bg-bondiBlue-950
