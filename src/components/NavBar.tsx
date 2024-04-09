@@ -46,7 +46,7 @@ const NavBar = () => {
     ]
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
-    const [controlWidth, setControlWidth] = useState('')
+    const [controlWidth, setControlWidth] = useState('MD')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
     const checkWidthDisplay = () => {

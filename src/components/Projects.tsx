@@ -2,10 +2,12 @@ import React from 'react'
 import TagSkill from './TagSkill'
 import CardProject from './CardProject'
 import { aujData, cafeAlturaData, globalLogisticData, pokemonData } from '../utils/conceptsData'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Projects = () => {
 
   return (
-    <section className='w-full min-h-screen flex flex-col items-center ' id='projects'>
+    <section data-aos="fade-up" data-aos-duration="600" className='w-full min-h-screen flex flex-col items-center ' id='projects'>
       <h2 className='w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-200 py-[4rem] '>Proyectos Desarrollados</h2>
       <article className='w-[90%] flex flex-wrap justify-center gap-2'>
         <CardProject
@@ -47,5 +49,5 @@ const Projects = () => {
     </section>
   )
 }
-
+AOS.init();
 export default Projects

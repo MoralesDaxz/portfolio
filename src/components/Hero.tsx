@@ -5,13 +5,45 @@ import pic from '../assets/Morales.jpg'
 import { TypeLetters } from './TypeLetters';
 import { motion } from 'framer-motion';
 import Projects from './Projects';
+import { gsap } from "gsap";
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+/* import {ScrollSmoother} from 'gsap/dist/ScrollSmoother'; */
 
 const Hero = () => {
+/*   gsap.registerPlugin( ScrollTrigger,ScrollSmoother); 
+  gsap.to("#box", { rotation: 27, x: 100, duration: 1 });
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true
+});
+smoother.effects("#box"); */
+
+  
+  // create the smooth scroller FIRST!
+/*   let smoother = ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
+    normalizeScroll: true
+  }); */
+  
+  // pin box-c when it reaches the center of the viewport, for 300px
+/*    ScrollTrigger.create({
+    trigger: "#box",
+    pin: true,
+    start: "center center",
+    end: "+=300",
+    markers: true
+  });  */
+  
   return (
     <>
       <section
+      id='box'
         className='z-10 w-full px-10 min-h-screen flex flex-col items-center justify-center '>
-        <article className='w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[6rem]'>
+        <article data-aos="fade-up" data-aos-duration="600" className='w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[6rem]'>
           <section className='w-full h-full sm:w-[50%] flex flex-col items-center justify-start gap-2 sm:gap-4 md:gap-5 lg:gap-8' >
             <h1
               className='text-center font-bold text-4xl sm:text-[3rem] lg:text-[4rem] text-bondiBlue-400'>Desarrollador web</h1>
@@ -39,6 +71,6 @@ const Hero = () => {
     </>
   )
 }
-
+AOS.init();
 
 export default Hero
