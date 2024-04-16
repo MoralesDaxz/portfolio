@@ -15,28 +15,11 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
         { link: '/proyectos', title: 'Proyectos' },
         { link: '/contacto', title: 'Contacto' },
         { link: '/habilidades', title: 'Habilidades' },]
-/* 
-    const container = {
-        hidden: {
-            opacity: 0,
-            y: 15
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: 'spring',
-                mass: 0.4,
-                damping: 8,
-                when: 'beforeChildren',
-                staggerChildren: 0.4
-            }
-        }
-    } */
+
     const styleSM = 'bgGradient absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 '
     const classLinkActive = 'text-2xl font-light text-[white] opacity-80 hover:opacity-100 '
     return (
-         /*    <AnimatePresence> */
+      
          <>
                 {closeModal && controlWidth === 'SM'  ?
                 <div className='w-full absolute top-0 flex items-center justify-between py-5 px-5'>
@@ -54,7 +37,7 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
                     href={item.link}>{item.title}</Link> })}
                 </div> }
          </>
-          /*   </AnimatePresence> */
+       
     )
 }
 

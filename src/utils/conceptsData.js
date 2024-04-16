@@ -32,6 +32,6 @@ const pokemonData = {
     img: "https://i.ibb.co/Cz2KMsX/auj.png",
     alt: "adoptaunjunior",
     url: "https://adoptaunjunior.es/",
-    skills:['React','TailwindCSS','Library']
+    skills:['React','Typescript','TailwindCSS','Library']
   };
 export { cafeAlturaData, globalLogisticData, pokemonData, aujData };

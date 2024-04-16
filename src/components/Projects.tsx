@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <section className='w-full min-h-screen flex flex-col items-center ' id='projects'>
       <h2 className='w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] pb-[3rem] '>Proyectos Desarrollados</h2>
-      <article className=' w-[90%] flex flex-wrap justify-center gap-3 sm:gap-8'>
+      <article className='w-full sm:w-[90%] flex flex-wrap justify-center gap-3 sm:gap-8'>
         <CardProject
           title={cafeAlturaData.title}
           ruteProject={cafeAlturaData.url}

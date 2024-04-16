@@ -22,8 +22,8 @@ const Hero = () => {
 
   return (
     <>
-      <section className='z-10 w-full px-10 min-h-screen flex flex-col items-center justify-center ' ref={container}>
-        <article className='box w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[7rem]'>
+      <section className='z-10 w-full px-4 sm:px-10 min-h-screen flex flex-col items-center justify-center ' ref={container}>
+        <article className='box w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[8rem]'>
           <section className='box w-full h-full sm:w-[50%] flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-5 lg:gap-8' >
             <h1
               className=' text-center font-bold text-4xl sm:text-[3rem] lg:text-[4rem] text-bondiBlue-400'>Desarrollador web</h1>
@@ -34,7 +34,7 @@ const Hero = () => {
             />
             <h2
               className='text-center font-bold text-3xl sm:text-[2rem] lg:text-[2.9rem] text-bondiBlue-40'
-            >¡Hola! soy Alfredo Morales.</h2>
+            >¡Hola! soy Alfredo Morales</h2>
             <div className='font-bold text-2xl sm:text-[1.5rem] lg:text-[2rem] text-bondiBlue-40 h-[90px]'>
               <TypeLetters />
             </div>

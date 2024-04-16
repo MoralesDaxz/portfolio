@@ -6,38 +6,6 @@ import { Aside } from './Aside'
 import Image from 'next/image'
 import { container } from '@/utils/motionVariables'
 
-/* const container = {
-    hidden: {
-        opacity: 0,
-        y: 15
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: 'spring',
-            mass: 0.4,
-            damping: 8,
-            when: 'beforeChildren',
-            staggerChildren: 0.4
-        }
-    }
-}
-const nextMotionItems = {
-    hidden: {
-        opacity: 0,
-        x: 0
-    },
-    visible: {
-        opacity: 1,
-        x: 80,
-        transition: {
-            type: 'spring',
-            delay: 0.5,
-            stiffness: 300
-        },
-    }
-} */
 const NavBar = () => {
     const route = [
         { link: '#projects', title: 'Proyectos' },
@@ -46,7 +14,8 @@ const NavBar = () => {
     ]
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
-    const [controlWidth, setControlWidth] = useState('MD')
+
+    const [controlWidth, setControlWidth] = useState(window.innerWidth < 640 ? 'SM':'MD')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
     const checkWidthDisplay = () => {
@@ -55,7 +24,6 @@ const NavBar = () => {
     const checkScrollDisplay = () => {
         return window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
     }
-
     useEffect(() => {
         checkScrollDisplay()
         checkWidthDisplay()

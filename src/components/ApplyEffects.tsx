@@ -8,8 +8,11 @@ type Props = {
 }
 const ApplyEffects: FC<Props> = ({ children }) => {
     const container = useRef(null)
+    useGSAP(() => {
+        gsap.fromTo(".box", { opacity: 0, y: 33}, { opacity: 1, y: 0,stagger:0.4 })
+      }, { scope: container }); // <-- magic;
     return (
-        <div ref={container}>
+        <div className='w-full' ref={container}>
             {children}
         </div>
     )
