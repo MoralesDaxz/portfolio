@@ -15,7 +15,7 @@ const NavBar = () => {
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
 
-    const [controlWidth, setControlWidth] = useState(window.innerWidth < 640 ? 'SM':'MD')
+    const [controlWidth, setControlWidth] = useState('')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
     const checkWidthDisplay = () => {
@@ -25,6 +25,7 @@ const NavBar = () => {
         return window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
     }
     useEffect(() => {
+        window.innerWidth < 640 ? setControlWidth('SM') : setControlWidth('MD')
         checkScrollDisplay()
         checkWidthDisplay()
 
