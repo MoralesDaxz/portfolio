@@ -21,7 +21,7 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
     return (
       
          <>
-                {closeModal && controlWidth === 'SM'  ?
+                {closeModal ?
                 <div className='w-full absolute top-0 flex items-center justify-between py-5 px-5'>
                     <Link className='' href={'/'}>
                         <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
