@@ -1,6 +1,5 @@
 'use client'
-import { AnimatePresence, motion } from 'framer-motion'
-import React, { FC, ReactElement, useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Aside } from './Aside'
 import Image from 'next/image'
@@ -14,7 +13,7 @@ const NavBar = () => {
     ]
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
-     /* { controlWidth, setControlWidth } = useContext(Control)  */
+
     const [controlWidth, setControlWidth] = useState('SM')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
@@ -46,7 +45,8 @@ const NavBar = () => {
                     </Link>
                     {route.map((item, index) => { return <Link className=' text-base sm:text-lg lg:text-xl font-medium transition-all duration-700 text-[white] opacity-80 hover:opacity-100 hover:bg-bondiBlue-950 z-10 rounded-md border-[3px] border-bondiBlue-900 hover:border-bondiBlue-500  hover:shadow-md hover:shadow-bondiBlue-800 px-5 py-3' key={index} href={item.link}>{item.title}</Link> })}
                 </div> :
-                <Aside closeModal={closeModal} controlWidth={controlWidth} setCloseModal={setCloseModal} />}
+                controlWidth === 'SM' ?
+                    <Aside closeModal={closeModal} controlWidth={controlWidth} setCloseModal={setCloseModal} /> : ''}
         </>
     )
 }
