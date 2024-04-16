@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         bondiBlue: {
+          40: '#cad1d3',
           50: '#ebffff',
           100: '#cefcff',
           200: '#a2f7ff', /* text  */
@@ -26,6 +27,8 @@ const config: Config = {
           800: '#126178',
           900: '#145165',
           950: '#063546',
+          980: '#00000057',
+       
         },
       },
     },

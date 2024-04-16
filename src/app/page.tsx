@@ -8,11 +8,9 @@ import BackgroundStars from "@/components/BackgroundStars";
 const Home = () => {
   return (
   <main>
-
       <BackgroundStars />
       <Hero />
-  
-  </main>
+    </main>
   )
 }
 
