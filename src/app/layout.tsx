@@ -2,6 +2,8 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import ApplyEffects from "@/components/ApplyEffects";
+import { Control } from "@/context/ControlDisplay";
+
 
 export default function RootLayout({
   children,
@@ -25,11 +27,13 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body>
-        <NavBar />
-        <ApplyEffects>
-        {children}
-        </ApplyEffects>
-        <Footer />
+        <Control>
+          <ApplyEffects>
+            <NavBar />
+            {children}
+            <Footer />
+          </ApplyEffects>
+        </Control>
       </body>
     </html>
   );

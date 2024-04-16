@@ -1,10 +1,10 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { FC, ReactElement, useEffect, useState } from 'react'
+import React, { FC, ReactElement, useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Aside } from './Aside'
 import Image from 'next/image'
-import { container } from '@/utils/motionVariables'
+
 
 const NavBar = () => {
     const route = [
@@ -14,10 +14,11 @@ const NavBar = () => {
     ]
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
-
+     /* { controlWidth, setControlWidth } = useContext(Control)  */
     const [controlWidth, setControlWidth] = useState('')
     const [closeModal, setCloseModal] = useState(true)
     const [bgNavBar, setBgNavBar] = useState(false)
+
     const checkWidthDisplay = () => {
         return window.innerWidth < 640 ? setControlWidth('SM') : setControlWidth('MD')
     }
@@ -25,9 +26,9 @@ const NavBar = () => {
         return window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
     }
     useEffect(() => {
-        window.innerWidth < 640 ? setControlWidth('SM') : setControlWidth('MD')
         checkScrollDisplay()
         checkWidthDisplay()
+        setCloseModal(true)
 
         window.addEventListener('resize', () => checkWidthDisplay())
         window.addEventListener('scroll', () => checkScrollDisplay())
@@ -35,7 +36,7 @@ const NavBar = () => {
             window.removeEventListener('resize', () => checkWidthDisplay()),
             window.removeEventListener('scroll', () => checkScrollDisplay())
         )
-    }, [])
+    }, [controlWidth])
 
     return (
         < >
