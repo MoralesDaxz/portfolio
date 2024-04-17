@@ -28,8 +28,8 @@ const pokemonData = {
   const aujData = {
     title: "AdoptaUnJunior",
     par:
-      "Colaboración voluntaria en el desarrollo de página web adoptaunjunior.es, me encargue de la implementación del componente Registro, Login y Recuperar contraseña usando la biblioteca de react-hook-form (useForm) y realizar la integración con el equipo backend, el registro envía los datos a backend y validamos si ya existe este usuario para dar una respuesta al usuario, en login realizamos una petición al servidor para validar si es un usuario registrado y con email confirmado, entregas semanales de las implementaciones.",
-    img: "https://i.ibb.co/Cz2KMsX/auj.png",
+      "Colaboración voluntaria en el desarrollo de página web adoptaunjunior.es, me encargue de la implementación del componente Registro, Login y Recuperar contraseña usando la biblioteca de react-hook-form (useForm) y realizar la integración con el equipo backend, validamos los datos aportados si ya existe en base de datos, en login  valida si es un usuario registrado y con email confirmado, entregas semanales de las implementaciones, con reunios de equipo para sincronizar los cambios y nuevas implementaciones.",
+    img: "https://i.ibb.co/vhjj1zK/204338.png",
     alt: "adoptaunjunior",
     url: "https://adoptaunjunior.es/",
     skills:['React','Typescript','TailwindCSS','Library']
