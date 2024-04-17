@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png" />
+        <link rel="icon" type="image/png" href="https://i.ibb.co/54ktrkM/portfolio-Icon.png" />
         <meta name="description" content="Desarrollador Web - Frontend." />
         <meta property="og:url" content="https://morales-dev.vercel.app/" />
         <meta property="og:title" content="Desarrollador Web - Developer" />
