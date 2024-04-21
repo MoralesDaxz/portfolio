@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Aside } from './Aside'
 import Image from 'next/image'
-import {  useControlDisplay } from '@/context/ControlDisplay'
+import { useControlDisplay } from '@/context/ControlDisplay'
 
 const NavBar = () => {
     const route = [
@@ -13,8 +13,27 @@ const NavBar = () => {
     ]
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20'
-    const { bgNavBar,  windowWidth } = useControlDisplay();
+    const { bgNavBar, setBgNavBar, windowWidth, setWindowWidth, setControlWidth } = useControlDisplay();
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWindowWidth(window.innerWidth);
+            const handleResize = () => {
+                setWindowWidth(window.innerWidth * 1);
+                setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
+            };
 
+            const handleScroll = () => {
+                window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
+            }
+            window.addEventListener('resize', handleResize);
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                window.removeEventListener('resize', handleResize);
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, []);
 
     return (
         < >
