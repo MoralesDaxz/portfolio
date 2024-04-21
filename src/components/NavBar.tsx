@@ -1,7 +1,7 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { Aside } from './Aside'
+import { NavMovil } from './NavMovil'
 import Image from 'next/image'
 import { useControlDisplay } from '@/context/ControlDisplay'
 
@@ -12,8 +12,8 @@ const NavBar = () => {
         { link: '/contacto', title: 'Contacto' },
     ];
 
-    const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20';
-    const { bgNavBar, setBgNavBar, windowWidth, setWindowWidth, setControlWidth } = useControlDisplay();
+    const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500';
+    const { bgNavBar, windowWidth } = useControlDisplay();
  
     return (
         < >
@@ -24,7 +24,7 @@ const NavBar = () => {
                     </Link>
                     {route.map((item, index) => { return <Link className=' text-base sm:text-lg lg:text-xl font-medium transition-all duration-700 text-[white] opacity-80 hover:opacity-100 hover:bg-bondiBlue-950 z-10 rounded-md border-[3px] border-bondiBlue-900 hover:border-bondiBlue-500  hover:shadow-md hover:shadow-bondiBlue-800 px-5 py-3' key={index} href={item.link}>{item.title}</Link> })}
                 </div> :
-                <Aside />}
+                <NavMovil />}
         </>
     )
 }

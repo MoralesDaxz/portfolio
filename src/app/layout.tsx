@@ -14,7 +14,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="https://i.ibb.co/54ktrkM/portfolio-Icon.png" />
         <meta name="description" content="Desarrollador Web - Frontend." />
         <meta property="og:url" content="https://morales-dev.vercel.app/" />
-        <meta property="og:title" content="Desarrollador Web - Developer" />
+        <meta property="og:title" content="Alfredo Morales - Developer" />
         <meta property="og:description" content="Soy Alfredo Morales, presentación de mi portafolio web, proyectos y entornos prácticos desarrollados." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_ES" />

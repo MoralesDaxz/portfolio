@@ -27,7 +27,7 @@ const TagSkill: FC<Prop> = ({ title, classTag, children }) => {
 
     return (
         <>
-            <span className={`p-1 text-bondiBlue-500 flex items-center gap-1 text-[.7rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}>
+            <span className={`text-bondiBlue-500 flex items-center gap-1 text-[.7rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}>
                 {iconTag}
                 {children}
                 {title}

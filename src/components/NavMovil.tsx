@@ -6,9 +6,8 @@ import close from '../assets/close.svg'
 import Image from 'next/image';
 import { useControlDisplay } from '@/context/ControlDisplay';
 
-const Aside = () => {
+const NavMovil = () => {
     const { closeModal, setCloseModal } = useControlDisplay()
-
     const [chooseLink, setChooseLink] = useState('')
     const route = [
         { link: '/proyectos', title: 'Proyectos' },
@@ -39,4 +38,4 @@ const Aside = () => {
     )
 }
 
-export { Aside }
+export { NavMovil }

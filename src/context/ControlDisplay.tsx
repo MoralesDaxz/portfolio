@@ -29,7 +29,7 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
     const [windowWidth, setWindowWidth] = useState<number>(0);
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setWindowWidth(window.innerWidth);
+            
             const handleResize = () => {
                 setWindowWidth(window.innerWidth * 1);
                 setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
