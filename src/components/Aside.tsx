@@ -1,15 +1,14 @@
-import { AnimatePresence, motion } from 'framer-motion';
+'use client'
 import Link from 'next/link';
-import React, { Dispatch, FC, SetStateAction, useState  } from 'react'
+import React, { useState  } from 'react'
 import menu from '../assets/menu.svg'
 import close from '../assets/close.svg'
 import Image from 'next/image';
-type Props = {
-    closeModal: boolean,
-    controlWidth:string,
-    setCloseModal: Dispatch<SetStateAction<boolean>>
-}
-const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
+import { useControlDisplay } from '@/context/ControlDisplay';
+
+const Aside = () => {
+    const { closeModal, setCloseModal } = useControlDisplay()
+
     const [chooseLink, setChooseLink] = useState('')
     const route = [
         { link: '/proyectos', title: 'Proyectos' },
@@ -23,10 +22,10 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
          <>
                 {closeModal ?
                 <div className='w-full absolute top-0 flex items-center justify-between py-5 px-5'>
-                    <Link className='' href={'/'}>
+                    <Link className='z-10' href={'/'}>
                         <Image priority src={'https://i.ibb.co/wwqJ9qC/favicon-removebg-preview.png'} width={40} height={40} alt='logo' title='logo' />
                     </Link>
-                    <Image priority className='opacity-80 z-10' onClick={() => setCloseModal(false)}  src={menu} color='#ebffff' width={40} height={40} alt='menu'/>
+                    <Image priority className='opacity-80 z-10 cursor-pointer' onClick={() => setCloseModal(false)}  src={menu} color='#ebffff' width={40} height={40} alt='menu'/>
                 </div>
                  :<div className={styleSM}>
                     <Image className='absolute top-3 right-3 cursor-pointer' onClick={() => setCloseModal(true)} src={close} width={30} height={30} alt='close' title='close'/>
@@ -37,7 +36,6 @@ const Aside: FC<Props> = ({ closeModal, controlWidth, setCloseModal }) => {
                     href={item.link}>{item.title}</Link> })}
                 </div> }
          </>
-       
     )
 }
 

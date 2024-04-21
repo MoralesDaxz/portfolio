@@ -1,10 +1,8 @@
 
 import React, { useRef } from 'react'
-import { container, nextItems } from '@/utils/motionVariables'
 import Image from 'next/image';
 import pic from '../assets/Morales.jpg'
 import { TypeLetters } from './TypeLetters';
-import { motion } from 'framer-motion';
 import Projects from './Projects';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap/dist/gsap';
