@@ -29,23 +29,23 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
     const [windowWidth, setWindowWidth] = useState<number>(641);
 
     const handleResize = () => {
-        if (typeof window !== 'undefined') {
+     
             setWindowWidth(window.innerWidth * 1);
             setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
-        }
+        
     };
 
     const handleScroll = () => {
-        if (typeof window !== 'undefined') {
+      
             window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
-        }
+        
     }
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+    
             window.addEventListener('resize', handleResize);
             window.addEventListener('scroll', handleScroll);
-        }
+        
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
