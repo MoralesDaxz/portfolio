@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, createContext, ReactElement, Dispatch, SetStateAction, useEffect, FC, useContext } from "react";
+const windowDetail = typeof window !== 'undefined'?window.innerWidth *1:0;
+
 type ControlProps = {
     controlWidth: string;
     setControlWidth: Dispatch<SetStateAction<string>>;
@@ -19,15 +21,14 @@ export const ControlDisplay = createContext<ControlProps>({
     setCloseModal: () => {},
     bgNavBar: false,
     setBgNavBar: () => {},
-    windowWidth: Number(window.innerWidth) *1,
+    windowWidth: windowDetail,
     setWindowWidth: () => {},
 });
-
 export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
     const [controlWidth, setControlWidth] = useState<string>('');
     const [closeModal, setCloseModal] = useState<boolean>(true);
     const [bgNavBar, setBgNavBar] = useState<boolean>(false);
-    const [windowWidth, setWindowWidth] = useState<number>(Number(window.innerWidth) *1);
+    const [windowWidth, setWindowWidth] = useState<number>(windowDetail);
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
@@ -38,8 +39,10 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
     }
 
     useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        window.addEventListener('scroll', handleScroll);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            window.addEventListener('scroll', handleScroll);
+        }
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
