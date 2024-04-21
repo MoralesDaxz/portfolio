@@ -1,6 +1,5 @@
-'use client'
 
-import { useState, createContext, ReactElement, Dispatch, SetStateAction, useEffect, FC, useContext } from "react";
+import { useState, createContext, Dispatch, SetStateAction, useEffect, FC, useContext } from "react";
 
 type ControlProps = {
     controlWidth: string;
@@ -30,12 +29,16 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
     const [windowWidth, setWindowWidth] = useState<number>(641);
 
     const handleResize = () => {
-        setWindowWidth(window.innerWidth * 1);
-        setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
+        if (typeof window !== 'undefined') {
+            setWindowWidth(window.innerWidth * 1);
+            setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
+        }
     };
 
     const handleScroll = () => {
-        window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
+        if (typeof window !== 'undefined') {
+            window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
+        }
     }
 
     useEffect(() => {
