@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, createContext, ReactElement, Dispatch, SetStateAction, useEffect, FC, useContext } from "react";
-const windowDetail = typeof window !== 'undefined'?window.innerWidth *1:0;
 
 type ControlProps = {
     controlWidth: string;
@@ -15,25 +14,26 @@ type ControlProps = {
 }
 
 export const ControlDisplay = createContext<ControlProps>({
-    controlWidth: '',
-    setControlWidth: () => {},
+    controlWidth: 'MD',
+    setControlWidth: () => { },
     closeModal: false,
-    setCloseModal: () => {},
+    setCloseModal: () => { },
     bgNavBar: false,
-    setBgNavBar: () => {},
-    windowWidth: windowDetail,
-    setWindowWidth: () => {},
+    setBgNavBar: () => { },
+    windowWidth: 641,
+    setWindowWidth: () => { },
 });
 export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
     const [controlWidth, setControlWidth] = useState<string>('');
     const [closeModal, setCloseModal] = useState<boolean>(true);
     const [bgNavBar, setBgNavBar] = useState<boolean>(false);
-    const [windowWidth, setWindowWidth] = useState<number>(windowDetail);
+    const [windowWidth, setWindowWidth] = useState<number>(641);
 
     const handleResize = () => {
-        setWindowWidth(window.innerWidth);
+        setWindowWidth(window.innerWidth * 1);
+        setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
     };
-    
+
     const handleScroll = () => {
         window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
     }
@@ -47,7 +47,7 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
         };
-    },[]);
+    }, []);
 
     return (
         <ControlDisplay.Provider value={{
@@ -62,4 +62,4 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
 }
 
 // Crear un hook personalizado para usar los estados dentro de otros componentes
-export const useControlDisplay = ()=> useContext<ControlProps>(ControlDisplay);
+export const useControlDisplay = () => useContext<ControlProps>(ControlDisplay);

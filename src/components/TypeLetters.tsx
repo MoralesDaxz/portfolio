@@ -6,13 +6,13 @@ const TypeLetters = () => {
       <TypeAnimation
         sequence={[
           'Piensa en lo que quieres lograr',
-          1500,
+          2000,
           'Desarrolla lo que imaginas con pasion',
-          1500,
+          2000,
           'Implementa y perfecciona cada paso',
-          1500,
+          2000,
           'Disfruta tus logros, es tú momento!',
-          1500
+          2000
         ]}
         speed={60}
         style={{ fontSize: '1em' }}

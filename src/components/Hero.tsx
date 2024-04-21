@@ -1,4 +1,4 @@
-
+'use client'
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import pic from '../assets/Morales.jpg'
@@ -7,7 +7,6 @@ import Projects from './Projects';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 
 const Hero = () => {
 
