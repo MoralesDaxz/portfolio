@@ -15,7 +15,7 @@ const TypeLetters = () => {
           2000
         ]}
         speed={60}
-        style={{ fontSize: '1em' }}
+        style={{ fontSize: '.9em' }}
         repeat={Infinity}
       />
     </>
