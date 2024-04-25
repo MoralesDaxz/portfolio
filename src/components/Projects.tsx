@@ -16,7 +16,7 @@ const Projects = () => {
           altImg={cafeAlturaData.alt}
           srcImg={cafeAlturaData.img}
           prf={cafeAlturaData.prf}>
-          {cafeAlturaData.skills.map((item,index) => { return <TagSkill key={index} title={item} /> })}
+          {cafeAlturaData.skills.map((item,index) => { return <TagSkill classTag={'text-bondiBlue-500 items-center'} key={index} title={item} /> })}
         </CardProject>
 
         <CardProject
@@ -25,7 +25,7 @@ const Projects = () => {
           altImg={globalLogisticData.alt}
           srcImg={globalLogisticData.img}
           prf={globalLogisticData.prf}>
-          {globalLogisticData.skills.map((item,index) => { return <TagSkill key={index} title={item} /> })}
+          {globalLogisticData.skills.map((item,index) => { return <TagSkill classTag={'text-bondiBlue-500 items-center'} key={index} title={item} /> })}
         </CardProject>
 
         <CardProject
@@ -34,7 +34,7 @@ const Projects = () => {
           altImg={pokemonData.alt}
           srcImg={pokemonData.img}
           prf={pokemonData.prf}>
-          {pokemonData.skills.map((item,index) => { return <TagSkill key={index} title={item} /> })}
+          {pokemonData.skills.map((item,index) => { return <TagSkill classTag={'text-bondiBlue-500 items-center'} key={index} title={item} /> })}
         </CardProject>
 
         <CardProject
@@ -43,7 +43,7 @@ const Projects = () => {
           altImg={aujData.alt}
           srcImg={aujData.img}
           prf={aujData.prf}>
-          {aujData.skills.map((item,index) => { return <TagSkill key={index} title={item} /> })}
+          {aujData.skills.map((item,index) => { return <TagSkill classTag={'text-bondiBlue-500 items-center'} key={index} title={item} /> })}
         </CardProject>
       </article>
     </section>

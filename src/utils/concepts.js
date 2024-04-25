@@ -38,4 +38,20 @@ const aujData = {
   url: "https://adoptaunjunior.es/",
   skills: ["React", "Typescript", "TailwindCSS", "Library"],
 };
-export { cafeAlturaData, globalLogisticData, pokemonData, aujData, aboutMe };
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Typescript",
+  "TailwindCSS",
+  "Libraries",
+];
+export {
+  cafeAlturaData,
+  globalLogisticData,
+  pokemonData,
+  aujData,
+  aboutMe,
+  skills,
+};
