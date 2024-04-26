@@ -1,4 +1,5 @@
-import React, { Dispatch, FC, ReactElement, SetStateAction, useState } from 'react'
+'use client'
+import React, {  FC, ReactElement,  useState } from 'react'
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaGear } from "react-icons/fa6";
