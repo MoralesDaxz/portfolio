@@ -12,13 +12,12 @@ type Prop = {
     title?: string,
     classTag?: string,
     children?: ReactElement,
-    sizeImg?: string
-    state?: boolean
-    setState?: React.Dispatch<React.SetStateAction<boolean | undefined>> |undefined
+    sizeImg?: string,
+    show?: boolean,
 }
 
-const TagSkill: FC<Prop> = ({ title, classTag, children, setState, state, sizeImg = '1.2rem' }) => {
-
+const TagSkill: FC<Prop> = ({ title, classTag, children, show, sizeImg = '1.2rem' }) => {
+    const [showSkill, setShowSkill] = useState(false)
     const iconTag = title == 'React' ? <FaReact size={sizeImg} color='#0a7994' /> :
         title == 'TailwindCSS' ? <SiTailwindcss size={sizeImg} color='#38BDF8' /> :
             title == 'Api' ? <FaGear size={sizeImg} color='#94A3B8' /> :
@@ -31,10 +30,10 @@ const TagSkill: FC<Prop> = ({ title, classTag, children, setState, state, sizeIm
 
 
     return (
-        <div onClick={() => setState(!state)} className={`flex gap-1 text-[.7rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}>
+        <div onMouseEnter={() => setShowSkill(true)} onMouseLeave={() => setShowSkill(false)} className={`flex gap-1 text-[.7rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}>
             {iconTag}
             {children}
-            <p>title</p>
+            {showSkill || show ? <p className='h-auto opacity-100 transition-all duration-700'>{title}</p> : <p className='opacity-0 duration-700'>{title}</p>}
         </div>
     )
 }

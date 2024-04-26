@@ -14,13 +14,13 @@ const Hero = () => {
   /* Hero debe ser una seccion no una landing, esto lo llevaremos a
   page para manejar desde alli todos como un componente independiente en PAGE 
   alli implementaremos gsap*/
-  type init ={
-    skillTitle:boolean,
-    setSkillTitle:React.Dispatch<React.SetStateAction<boolean>> 
-  }
+
 
   const { windowWidth } = useControlDisplay();
-  const [skillTitle, setSkillTitle] = useState<init>(false)
+  const [skillTitle, setSkillTitle] = useState('')
+  const [showTitle, setShowTitle] = useState(false)
+  
+
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
   let tl = gsap.timeline({ paused: true });
@@ -55,16 +55,15 @@ const Hero = () => {
         <article className='box w-full '>
           <h2 className='w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem] '>Habilidades</h2>
           <div className='w-full flex flex-wrap gap-6 sm:gap-4 justify-center'>
-            {skills.map((item, index) => {
-              return <TagSkill
-              setState={setSkillTitle}
-              state={skillTitle}
-                key={index}
-                title={item}
-                sizeImg={windowWidth < 640 ? '4rem' : '6rem'}
-                classTag='text-bondiBlue-40 flex-col items-center'
-              />
-            })}
+            {skills.map((item, index) => {return <div className='cursor-pointer' key={index}>
+                 <TagSkill
+                  title={item}
+                  sizeImg={windowWidth < 640 ? '4rem' : '6rem'}
+                  classTag='text-bondiBlue-40 flex-col items-center'
+                />
+               
+              </div>}
+            )}
           </div>
         </article>
         <article>
