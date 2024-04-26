@@ -14,7 +14,13 @@ const Hero = () => {
   /* Hero debe ser una seccion no una landing, esto lo llevaremos a
   page para manejar desde alli todos como un componente independiente en PAGE 
   alli implementaremos gsap*/
-  const { bgNavBar, windowWidth } = useControlDisplay();
+  type init ={
+    skillTitle:boolean,
+    setSkillTitle:React.Dispatch<React.SetStateAction<boolean>> 
+  }
+
+  const { windowWidth } = useControlDisplay();
+  const [skillTitle, setSkillTitle] = useState<init>(false)
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
   let tl = gsap.timeline({ paused: true });
@@ -51,6 +57,8 @@ const Hero = () => {
           <div className='w-full flex flex-wrap gap-6 sm:gap-4 justify-center'>
             {skills.map((item, index) => {
               return <TagSkill
+              setState={setSkillTitle}
+              state={skillTitle}
                 key={index}
                 title={item}
                 sizeImg={windowWidth < 640 ? '4rem' : '6rem'}
