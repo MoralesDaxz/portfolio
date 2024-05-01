@@ -1,12 +1,15 @@
 'use client'
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha';
+require('dotenv').config();
 
 const Contact = () => {
   const siteKey = `${process.env.SITE_KEY}`
   const secretPass = `${process.env.SECRET_PASS}`
 const [capVal, setCapVal] = useState('')
+useEffect(()=>{console.log(capVal);
+},[capVal])
   const {
     register,
     handleSubmit,
@@ -49,7 +52,7 @@ const [capVal, setCapVal] = useState('')
           
  
 
-     {siteKey && <ReCAPTCHA sitekey={'6LdgZM0pAAAAAJ-dOSKgJTaLerZ6EZXLT5W0jhdd'} onChange={(val)=> val && setCapVal(val)}/>} 
+     {siteKey && <ReCAPTCHA sitekey={siteKey} onChange={(val)=> val && setCapVal(val)}/>} 
         <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
       
       </form>
