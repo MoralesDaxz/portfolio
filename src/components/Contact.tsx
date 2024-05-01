@@ -1,12 +1,12 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
   const siteKey = `${process.env.SITE_KEY}`
   const secretPass = `${process.env.SECRET_PASS}`
-
+const [capVal, setCapVal] = useState('')
   const {
     register,
     handleSubmit,
@@ -49,7 +49,7 @@ const Contact = () => {
           
  
 
-     {siteKey && <ReCAPTCHA sitekey={siteKey} accessKey={siteKey} onChange={onCaptcha}/>} 
+     {siteKey && <ReCAPTCHA sitekey={'6LdgZM0pAAAAAJ-dOSKgJTaLerZ6EZXLT5W0jhdd'} onChange={(val)=> val && setCapVal(val)}/>} 
         <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
       
       </form>
