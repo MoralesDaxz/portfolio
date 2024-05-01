@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
-  const siteKey = process.env.SITE_KEY
-  const secretPass = process.env.SECRET_PASS
+  const siteKey = `${process.env.SITE_KEY}`
+  const secretPass = `${process.env.SECRET_PASS}`
 
   const {
     register,
@@ -49,7 +49,7 @@ const Contact = () => {
           
  
 
-     {siteKey && <ReCAPTCHA sitekey={siteKey} accessKey={secretPass} onChange={(event)=> onCaptcha(event)}/>} 
+     {siteKey && <ReCAPTCHA sitekey={siteKey} accessKey={secretPass} onChange={onCaptcha}/>} 
         <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
       
       </form>
