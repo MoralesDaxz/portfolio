@@ -49,7 +49,7 @@ const Contact = () => {
           
  
 
-     {siteKey && <ReCAPTCHA sitekey={siteKey} accessKey={secretPass} onChange={onCaptcha}/>} 
+     {siteKey && <ReCAPTCHA sitekey={secretPass} onChange={onCaptcha}/>} 
         <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
       
       </form>
