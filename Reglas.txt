@@ -1,5 +1,16 @@
+sw: 6LdgZM0pAAAAAJ-dOSKgJTaLerZ6EZXLT5W0jhdd
+sp: 6LdgZM0pAAAAAKaqeJ9EZWDaR1DmDQ60YlDyAMaR
 Titulos - NavBar
 text-base sm:text-lg lg:text-xl font-medium
 
-Hover
-bg-bondiBlue-950
+Titulos h1
+font-bold text-4xl sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3.2rem] text-bondiBlue-400
+
+Titulos h2 
+font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem]
+
+Titulos h3
+font-medium text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] text-bondiBlue-40
+
+Parrafo
+font-extralight text-bondiBlue-40 text-[.9rem] sm:text-[1rem] lg:text-[1.1rem]

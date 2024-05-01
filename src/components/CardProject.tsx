@@ -23,7 +23,7 @@ const CardProject: FC<Prop> = ({ ruteProject, title, srcImg, altImg, children, p
                         alt={altImg}
                         src={srcImg} />
                 </div>
-                <p className=' text-bondiBlue-40 font-extralight text-[1rem] sm:text-[1.1rem] lg:text-[1.2rem] h-[120px] md:h-[180px] overflow-y-auto w-[85%] lg:w-[70%] border-b-2 border-b-bondiBlue-800 py-2'>{prf}</p>
+                <p className=' text-bondiBlue-40 font-extralight text-[.9rem] sm:text-[1rem] lg:text-[1.1rem] h-[120px] overflow-y-auto w-[85%] lg:w-[70%] border-b-2 border-b-bondiBlue-800 py-2'>{prf}</p>
                 <div className='w-full flex flex-wrap justify-evenly'>
                     {children}
                 </div>

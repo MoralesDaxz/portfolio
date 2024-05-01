@@ -55,7 +55,7 @@ const TagSkill: FC<Prop> = ({
     <div
       onMouseEnter={() => setShowSkill(true)}
       onMouseLeave={() => setShowSkill(false)}
-      className={`flex gap-1 text-[.7rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}
+      className={`flex gap-1 font-medium text-[.9rem] sm:text-[1rem] lg:text-[1.1rem] ${classTag}`}
     >
       {iconTag}
       {children}
