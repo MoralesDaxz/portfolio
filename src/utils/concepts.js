@@ -45,6 +45,8 @@ const skills = [
   "React",
   "Typescript",
   "TailwindCSS",
+  "Postman",
+  "GitHub",
   "Libraries",
 ];
 export {
