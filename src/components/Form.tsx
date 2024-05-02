@@ -38,8 +38,8 @@ const Form: FC<Props> = ({ setRegistered }) => {
         className="bg-transparent outline-none border-[1px] border-bondiBlue-800 rounded-md p-1 focus-within:border-bondiBlue-600 focus-within:bg-transparent"
         type="email"
         required
-        id="email"
-        name="Email"
+        id="EmailID"
+        name="EmailName"
       />
       <label className="mt-2 font-medium">Deja tu mensaje</label>
       <textarea
@@ -47,8 +47,8 @@ const Form: FC<Props> = ({ setRegistered }) => {
         className="bg-transparent outline-none h-14 sm:h-24 border-[1px] border-bondiBlue-800 rounded-md p-1 focus-within:border-bondiBlue-600 focus-within:bg-transparent"
         minLength={5}
         required
-        id="message"
-        name="Message"
+        id="MensajeID"
+        name="MensajeName"
       />
       <div className="w-full mt-2 flex justify-center">
         {siteKey && (
