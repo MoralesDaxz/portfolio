@@ -39,7 +39,7 @@ const Form: FC<Props> = ({ setRegistered }) => {
         type="email"
         required
         id="email"
-        name="email"
+        name="Email"
       />
       <label className="mt-2 font-medium">Deja tu mensaje</label>
       <textarea
@@ -48,7 +48,7 @@ const Form: FC<Props> = ({ setRegistered }) => {
         minLength={5}
         required
         id="message"
-        name="message"
+        name="Message"
       />
       <div className="w-full mt-2 flex justify-center">
         {siteKey && (
