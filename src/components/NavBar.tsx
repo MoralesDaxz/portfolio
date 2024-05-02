@@ -7,9 +7,9 @@ import { useControlDisplay } from '@/context/ControlDisplay'
 
 const NavBar = () => {
     const route = [
-        { link: '#projects', title: 'Proyectos' },
-        { link: '/habilidades', title: 'Habilidades' },
-        { link: '/contacto', title: 'Contacto' },
+        { link: '#proyectos', title: 'Proyectos' },
+        { link: '#habilidades', title: 'Habilidades' },
+        { link: '#contacto', title: 'Contacto' },
     ];
 
     const styleMD = 'z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500';

@@ -10,6 +10,11 @@ const Contact = () => {
 const [capVal, setCapVal] = useState('')
 useEffect(()=>{console.log(capVal);
 },[capVal])
+console.log('Inicio',siteKey);
+
+setTimeout(() => {
+  console.log('Final',siteKey);
+}, 2500);
   const {
     register,
     handleSubmit,

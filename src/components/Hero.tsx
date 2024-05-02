@@ -61,16 +61,16 @@ const Hero = () => {
             })}
           </section>
         </article>
-        <article className="box w-full">
+        <article className="box w-full" id="proyectos">
           <Projects />
         </article>
-        <article className="box w-full ">
+        <article className="box w-full" id="habilidades">
           <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem] ">
             Habilidades
           </h2>
           <Skills />
         </article>
-        <article>
+        <article id="contacto">
           <Contact />
         </article>
       </section>
