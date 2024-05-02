@@ -12,9 +12,6 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 
 const Hero = () => {
-  /* Hero debe ser una seccion no una landing, esto lo llevaremos a
-  page para manejar desde alli todos como un componente independiente en PAGE 
-  alli implementaremos gsap*/
 
   const { windowWidth } = useControlDisplay();
 
@@ -70,7 +67,7 @@ const Hero = () => {
           </h2>
           <Skills />
         </article>
-        <article id="contacto">
+        <article className="w-full" id="contacto">
           <Contact />
         </article>
       </section>

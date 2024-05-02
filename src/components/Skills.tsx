@@ -13,7 +13,7 @@ const Skills = () => {
                 <div className="cursor-pointer" key={index}>
                   <TagSkill
                     title={item}
-                    sizeImg={windowWidth < 640 ? "4rem" : "7rem"}
+                    sizeImg={windowWidth < 640 ? "4rem" : "6rem"}
                     classTag="text-bondiBlue-40 flex-col items-center"
                   />
                 </div>
