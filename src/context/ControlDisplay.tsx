@@ -1,4 +1,3 @@
-'use client'
 import { useState, createContext, Dispatch, SetStateAction, useEffect, FC, useContext } from "react";
 
 type ControlProps = {
