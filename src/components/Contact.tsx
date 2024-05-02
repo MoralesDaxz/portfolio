@@ -54,8 +54,6 @@ setTimeout(() => {
             required: "Campo requerido.",
           })}
         ></textarea>
-          
- 
 
      {siteKey && <ReCAPTCHA sitekey={siteKey} onChange={(val)=> val && setCapVal(val)}/>} 
         <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
