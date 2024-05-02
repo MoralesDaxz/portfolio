@@ -3,20 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 const Contact = () => {
-
   const siteKey = process.env.NEXT_PUBLIC_SITE_WEB;
-  const secretPass = `${process.env.SECRET_PASS}`;
-  const [capVal, setCapVal] = useState("");
-  useEffect(() => {
-    console.log(capVal);
-  }, [capVal]);
-  console.log("Inicio", siteKey);
+  const secretPass = process.env.SECRET_PASS;
+  const [capVal, setCapVal] = useState("NO_DATA");
 
   setTimeout(() => {
-    console.log("Final", siteKey);
-  
+    console.log("siteKey", siteKey);
+    console.log("secretPass", secretPass);
   }, 2500);
   const {
     register,
@@ -65,6 +59,7 @@ const Contact = () => {
           />
         )}
         <input
+          disabled={capVal !== "NO_DATA" ? false : true}
           type="submit"
           className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium"
           value="Enviar"
