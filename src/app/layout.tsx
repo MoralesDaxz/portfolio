@@ -7,7 +7,12 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+
+ {
+  const secretPass = process.env.SECRET_PASS;
+  console.log(secretPass);
+  
   return (
     <html lang="en">
       <head>
