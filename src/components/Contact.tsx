@@ -1,26 +1,31 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import ReCAPTCHA from 'react-google-recaptcha';
-
+import ReCAPTCHA from "react-google-recaptcha";
+import { loadEnvConfig } from "@next/env";
 
 const Contact = () => {
-  const siteKey = `${process.env.SITE_KEY}`
-  const secretPass = `${process.env.SECRET_PASS}`
-const [capVal, setCapVal] = useState('')
-useEffect(()=>{console.log(capVal);
-},[capVal])
-console.log('Inicio',siteKey);
+  const projectDir = process.cwd();
+  loadEnvConfig(projectDir);
+  const siteKey = `${process.env.SITE_KEY}`;
+  const secretPass = `${process.env.SECRET_PASS}`;
+  const [capVal, setCapVal] = useState("");
+  useEffect(() => {
+    console.log(capVal);
+  }, [capVal]);
+  console.log("Inicio", siteKey);
 
-setTimeout(() => {
-  console.log('Final',siteKey);
-}, 2500);
+  setTimeout(() => {
+    console.log("Final", siteKey);
+    console.log(projectDir);
+    
+  }, 2500);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm(/* { defaultValues: { email: "", msg: "" } } */);
-  function onCaptcha(value:any) {
+  function onCaptcha(value: any) {
     console.log("Captcha value:", value);
   }
   return (
@@ -29,7 +34,7 @@ setTimeout(() => {
         Contactame
       </h2>
       <p className="text-lg sm:text-xl font-light text-bondiBlue-40 w-full">
-       Intentare darte una respuesta lo mas pronto que pueda!
+        Intentare darte una respuesta lo mas pronto que pueda!
       </p>
       <form
         className="w-[80%] sm:w-[70%] py-4 px-5 flex flex-col rounded-md border-2 border-bondiBlue-900 text-bondiBlue-40 font-extralight text-[.8rem] sm:text-[1rem] lg:text-[1.1rem]"
@@ -39,8 +44,8 @@ setTimeout(() => {
       >
         <label className="font-medium">Correo</label>
         <input
-        placeholder="persona@correo.com"
-        className="bg-transparent outline-none border-[1px] border-bondiBlue-800 rounded-md p-1 "
+          placeholder="persona@correo.com"
+          className="bg-transparent outline-none border-[1px] border-bondiBlue-800 rounded-md p-1 "
           {...register("email", {
             required: "Campo requerido.",
           })}
@@ -48,16 +53,24 @@ setTimeout(() => {
         />
         <label className="mt-2 font-medium">Deja tu mensaje</label>
         <textarea
-        placeholder="Queremos un proyecto para ..."
+          placeholder="Queremos un proyecto para ..."
           className="bg-transparent outline-none h-14 border-[1px] border-bondiBlue-800 rounded-md p-1"
           {...register("msg", {
             required: "Campo requerido.",
           })}
         ></textarea>
 
-     {siteKey && <ReCAPTCHA sitekey={siteKey} onChange={(val)=> val && setCapVal(val)}/>} 
-        <input type="submit" className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium" value="Enviar"/>
-      
+        {siteKey && (
+          <ReCAPTCHA
+            sitekey={siteKey}
+            onChange={(val) => val && setCapVal(val)}
+          />
+        )}
+        <input
+          type="submit"
+          className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium"
+          value="Enviar"
+        />
       </form>
     </section>
   );
