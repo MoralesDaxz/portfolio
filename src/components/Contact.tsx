@@ -1,19 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const siteKey = process.env.NEXT_PUBLIC_SITE_WEB;
- /*  const secretPass = process.env.SECRET_PASS; */
   const [capVal, setCapVal] = useState("NO_DATA");
-
+  const styleButton =
+    "cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium opacity-100";
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm(/* { defaultValues: { email: "", msg: "" } } */);
-   return (
+  } = useForm();
+  return (
     <section className="w-full flex flex-col items-center">
       <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem]">
         Contactame
@@ -54,7 +54,9 @@ const Contact = () => {
         <input
           disabled={capVal === "NO_DATA" ? true : false}
           type="submit"
-          className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium"
+          className={
+            capVal === "NO_DATA" ? styleButton + "opacity-30" : styleButton
+          }
           value="Enviar"
         />
       </form>
