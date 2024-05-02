@@ -56,7 +56,7 @@ const Contact = () => {
           />
         )}
         <input
-          disabled={capVal !== "NO_DATA" ? false : true}
+          disabled={capVal === "NO_DATA" ? true : false}
           type="submit"
           className="cursor-pointer border-2 border-bondiBlue-800 w-fit p-1 rounded-md mt-2 font-medium"
           value="Enviar"
