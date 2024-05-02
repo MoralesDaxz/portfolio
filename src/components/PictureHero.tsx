@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import pic from '../assets/Morales.jpg';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-import { SiGmail } from "react-icons/si";
+import { IoDocumentAttachOutline } from "react-icons/io5";
+import { IoDocumentAttach } from "react-icons/io5";
 import Link from 'next/link';
 const PictureHero = () => {
   const [modalPic, setModalPic] = useState(false)
@@ -16,13 +17,23 @@ const PictureHero = () => {
         className='cursor-pointer mainPic w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-500' />
       <div className={modalPic ? modalClass : `${modalClass} opacity-0 w-[0px]`}>
         <Link
-          className='w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700' href={'https://github.com/MoralesDaxz'} target='_blank'>
+          className='w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700' href={'https://github.com/MoralesDaxz'} 
+          title='GitHub'
+          target='_blank'>
           <FaGithub className='h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500' />
         </Link >
         <Link
-          className='w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700' href={'https://www.linkedin.com/in/alfredo-jose-morales-ramirez-6b664b1a7/'} target='_blank'>
+          className='w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700' href={'https://www.linkedin.com/in/alfredo-jose-morales-ramirez-6b664b1a7/'} 
+          title='Linkedin'
+          target='_blank'>
           <FaLinkedin className='h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500' />
         </Link>
+        <Link
+          className='w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700' href={'https://www.dropbox.com/scl/fi/o7tnducqcsqmei1fkz9dk/Alfredo-J-Morales-R-Madrid-28031.pdf?rlkey=bgprwnzvmp2mamr127bdkpg6v&st=9id0eqd8&dl=0'} 
+          title='Curriculum'
+          target='_blank'>
+          <IoDocumentAttach className='h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500' />
+        </Link >
       </div>
     </div>
 

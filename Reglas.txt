@@ -14,3 +14,10 @@ font-medium text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] text-bon
 
 Parrafo
 font-extralight text-bondiBlue-40 text-[.9rem] sm:text-[1rem] lg:text-[1.1rem]
+
+documentar: 
+formspree
+recaptcha
+NavBar
+buttons
+
