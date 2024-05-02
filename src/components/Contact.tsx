@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from 'react-google-recaptcha';
-require('dotenv').config();
+
 
 const Contact = () => {
   const siteKey = `${process.env.SITE_KEY}`
