@@ -2,12 +2,11 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
-import { loadEnvConfig } from "@next/env";
+
 
 const Contact = () => {
-  const projectDir = process.cwd();
-  loadEnvConfig(projectDir);
-  const siteKey = `${process.env.SITE_KEY}`;
+
+  const siteKey = process.env.NEXT_PUBLIC_SITE_WEB;
   const secretPass = `${process.env.SECRET_PASS}`;
   const [capVal, setCapVal] = useState("");
   useEffect(() => {
@@ -17,8 +16,7 @@ const Contact = () => {
 
   setTimeout(() => {
     console.log("Final", siteKey);
-    console.log(projectDir);
-    
+  
   }, 2500);
   const {
     register,

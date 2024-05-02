@@ -34,10 +34,12 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
             const handleResize = () => {
                 setWindowWidth(window.innerWidth * 1);
                 setControlWidth(window.innerWidth > 640 ? 'MD' : 'SM')
+                return
             };
 
             const handleScroll = () => {
                 window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false)
+                return
             }
             window.addEventListener('resize',()=> handleResize());
             window.addEventListener('scroll', ()=> handleScroll());
@@ -46,6 +48,7 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({ chil
                 window.removeEventListener('resize', ()=> handleResize());
                 window.removeEventListener('scroll', ()=> handleScroll());
             };
+           
         }
     }, []);
     return (
