@@ -4,7 +4,6 @@ import React, {
   Dispatch,
   FC,
   SetStateAction,
-  useEffect,
   useRef,
   useState,
 } from "react";
@@ -29,7 +28,7 @@ const Form: FC<Props> = ({ setRegistered,registered }) => {
   return (
     <form
       className={`p-3 w-[80%] sm:w-[60%] md:w-[40%] flex flex-col rounded-md border-2 border-bondiBlue-900 text-bondiBlue-40 font-extralight text-[.8rem] sm:text-[1rem] lg:text-[1.1rem] bg-[#020c0f9d] gradientForm ${registered ?'opacity-0 z-0' :'w-full opacity-100 z-10'}` }
-      onSubmit={() => handleSubmit }
+      onSubmit={() => {handleSubmit;setRegistered(true)} }
       action="https://formspree.io/f/mleqdlee"
       method="post"
     >
@@ -65,7 +64,6 @@ const Form: FC<Props> = ({ setRegistered,registered }) => {
         type="submit"
         className={captchaValue === "NO_DATA" ? styleButtonOFF : styleButtonON}
         value="Enviar mensaje"
-        onClick={()=>setRegistered(true)}
       />
     </form>
   );
