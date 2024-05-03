@@ -13,7 +13,8 @@ const Contact = () => {
         Contactame
       </h2>
       <div className="w-full flex flex-col items-center">
-        {registered ? <FormSend /> : <Form setRegistered={setRegistered} />}
+        <FormSend registered={registered} />
+        <Form registered={registered} setRegistered={setRegistered} />
       </div>
     </section>
   );
