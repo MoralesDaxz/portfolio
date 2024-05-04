@@ -16,6 +16,7 @@
           /* 900: '#145165', */    color: #145165;
           /* 950: '#063546', */    color: #063546;
           /* 980: '#063546', */    color: #00000057;
+          /* footer */color: #010f1bb6
        
        
 
@@ -42,7 +43,7 @@ html{
 }
 body {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   scroll-behavior: smooth;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
@@ -135,25 +136,28 @@ body {
 .loader {
   width: 84px;
   height: 84px;
-  position: relative;
+  position: absolute;
+
 }
 .loader:before , .loader:after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
-  width:64px;
-  height: 64px;
+  width:90px;
+  height: 90px;
   border-radius: 50%;
-  background:#063546;
+  background:#1cdbf421;
   transform: translate(-50% , -100%)  scale(0);
   animation: push 2s infinite linear;
+
 }
 .loader:after {
   animation-delay: 1s;
 }
 @keyframes push {
     0% , 50%{ transform: translate(-50% , 0%)  scale(1) }
+   
   100% { transform: translate(-50%, -100%) scale(0) }
 }
 /* Stars */

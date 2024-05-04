@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className="z-10 w-full px-4 sm:px-10 min-h-screen flex flex-col items-center justify-center "
+        className="z-10 w-full px-4 sm:px-10 flex flex-col items-center justify-center "
         ref={container}
       >
         <article className="box w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[8rem]">

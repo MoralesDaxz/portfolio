@@ -5,7 +5,7 @@ type Props ={
 }
 const FormSend:FC <Props> = ({registered}) => {
   return (
-    <div className={`w-[80%] sm:w-[60%] md:w-[40%] absolute flex flex-col items-center ${registered ?'opacity-100 z-10 h-full' :'opacity-0 z-0'}`}>
+    <div className={`w-[80%] sm:w-[60%] md:w-[40%] absolute flex flex-col items-center ${registered ?'opacity-100 z-10' :'opacity-0 z-0'}`}>
       <p className="font-medium text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] text-bondiBlue-50">
         ¡Genial tengo tu mensaje!
       </p>
