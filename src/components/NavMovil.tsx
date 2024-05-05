@@ -61,7 +61,7 @@ const NavMovil = () => {
               <Link
                 onClick={() => {
                   setChooseLink(item.title);
-                    setCloseModal(true)
+                  setCloseModal(true);
                 }}
                 className={
                   chooseLink == item.title

@@ -69,6 +69,5 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
     </ControlDisplay.Provider>
   );
 };
-
 // Crear un hook personalizado para usar los estados dentro de otros componentes
 export const useControlDisplay = () => useContext<ControlProps>(ControlDisplay);

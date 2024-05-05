@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { BsSendCheck } from "react-icons/bs";
 type Props = {
   registered: boolean;
 };
