@@ -2,7 +2,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 const TypeLetters = () => {
   return (
-    <>
+    <div className=" text-[.9em]">
       <TypeAnimation
         sequence={[
           "Piensa en lo que quieres lograr",
@@ -15,10 +15,9 @@ const TypeLetters = () => {
           2000,
         ]}
         speed={60}
-        style={{ fontSize: ".9em" }}
         repeat={Infinity}
       />
-    </>
+    </div>
   );
 };
 

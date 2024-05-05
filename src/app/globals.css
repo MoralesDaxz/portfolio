@@ -2,27 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.paleta {
-          /* 40: '#ebffff',  */    color: #c0c5c7;
-          /* 50: '#ebffff',  */    color: #ebffff;
-          /* 100: '#cefcff', */    color: #cefcff;
-          /* 200: '#a2f7ff', */    color: #a2f7ff;/* text  */
-          /* 300: '#63eefd', */    color: #63eefd;
-          /* 400: '#1cdcf4', */    color: #1cdcf4;
-          /* 500: '#00bfda', */    color: #00bfda;
-          /* 600: '#0398b7', */    color: #0398b7;/* Escoge en UI de pagina  */
-          /* 700: '#0a7994', */    color: #0a7994;
-          /* 800: '#126178', */    color: #126178;
-          /* 900: '#145165', */    color: #145165;
-          /* 950: '#063546', */    color: #063546;
-          /* 960: '#063546', */    color: #052a37;
-          /* 980: '#063546', */    color: #00000057;
-          /* footer */color: #010f1b95
-       
-       
-
-}
-
 :root {
   font-family: 'Outfit', sans-serif;
   --foreground-rgb: 0, 0, 0;
@@ -43,7 +22,6 @@
 } 
 body {
   width: 100%;
-
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,

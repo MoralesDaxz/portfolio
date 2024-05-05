@@ -27,7 +27,7 @@ const Form: FC<Props> = ({ setRegistered,registered }) => {
   
   return (
     <form
-      className={`p-5 w-[80%] sm:w-[60%] md:w-[40%] flex flex-col rounded-md border-2 border-bondiBlue-900 text-bondiBlue-40 font-extralight text-[.8rem] sm:text-[1rem] lg:text-[1.1rem] bg-[#020c0f9d] gradientForm ${registered ?'opacity-0 z-0' :'w-full opacity-100 z-10'}` }
+      className={`p-5 w-[80%] sm:w-[60%] md:w-[40%] flex flex-col rounded-md border-2 border-bondiBlue-900 text-bondiBlue-40 font-extralight text-[..9rem] sm:text-[1rem] lg:text-[1.1rem] bg-[#020c0f9d] gradientForm ${registered ?'opacity-0 z-0' :'w-full opacity-100 z-10'}` }
       onSubmit={() => {handleSubmit;setRegistered(true)} }
       action="https://formspree.io/f/mleqdlee"
       method="post"
@@ -35,7 +35,7 @@ const Form: FC<Props> = ({ setRegistered,registered }) => {
       <label className="font-medium mb-1">Correo</label>
       <input
         placeholder="persona@correo.com"
-        className="bg-transparent outline-none border-[1px] border-bondiBlue-800 rounded-md p-2 focus-within:border-bondiBlue-600 focus-within:bg-transparent hover:border-bondiBlue-600 transition-all duration-700"
+        className="bg-transparent outline-none border-[1px] border-bondiBlue-800 rounded-md p-2 focus-within:border-bondiBlue-600 focus-within:bg-transparent hover:border-bondiBlue-600 transition-all duration-700 "
         type="email"
         required
         name="Email"
@@ -43,7 +43,7 @@ const Form: FC<Props> = ({ setRegistered,registered }) => {
       <label className="mt-3 font-medium mb-1">Deja tu mensaje</label>
       <textarea
         placeholder="Queremos un proyecto para ..."
-        className="bg-transparent outline-none h-14 sm:h-24 border-[1px] border-bondiBlue-800 rounded-md p-2 focus-within:border-bondiBlue-600 focus-within:bg-transparent hover:border-bondiBlue-600 transition-all duration-700"
+        className="bg-transparent outline-none h-14 sm:h-24 border-[1px] border-bondiBlue-800 rounded-md p-2 focus-within:border-bondiBlue-600 focus-within:bg-transparent hover:border-bondiBlue-600 transition-all duration-700 "
         minLength={5}
         required
         name="Mensaje"
