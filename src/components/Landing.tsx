@@ -11,7 +11,7 @@ import { useControlDisplay } from "@/context/ControlDisplay";
 import Skills from "./Skills";
 import Contact from "./Contact";
 
-const Hero = () => {
+const Landing = () => {
 
   const { windowWidth } = useControlDisplay();
 
@@ -44,7 +44,7 @@ const Hero = () => {
             <h2 className="text-center font-bold text-3xl sm:text-[2rem] lg:text-[2.5rem] text-bondiBlue-40">
               ¡Hola! soy Alfredo Morales
             </h2>
-            <div className="font-bold text-2xl sm:text-[1.5rem] lg:text-[2rem] text-bondiBlue-40 h-[90px]">
+            <div className="font-bold text-2xl sm:text-[1.5rem] lg:text-[2rem] text-bondiBlue-40 h-[90px] opacity-80">
               <TypeLetters />
             </div>
           </section>
@@ -62,12 +62,12 @@ const Hero = () => {
           <Projects />
         </article>
         <article className="box w-full" id="habilidades">
-          <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem] ">
+          <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] pb-[2rem] ">
             Habilidades
           </h2>
           <Skills />
         </article>
-        <article className="w-full" id="contacto">
+        <article className="box w-full" id="contacto">
           <Contact />
         </article>
       </section>
@@ -75,4 +75,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Landing;
