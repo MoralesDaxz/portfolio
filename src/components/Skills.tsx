@@ -8,10 +8,10 @@ const Skills = () => {
   const { windowWidth } = useControlDisplay();
   return (
     <article className="box w-full" id="habilidades">
-      <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] pb-[2rem] ">
+      <h2 className="box w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] pb-[2rem] ">
         Habilidades
       </h2>
-      <section className="w-full flex flex-wrap gap-6 justify-center">
+      <section className="box w-full flex flex-wrap gap-6 justify-center">
         {skills.map((item, index) => {
           return (
             <div className="cursor-pointer" key={index}>

@@ -18,7 +18,7 @@ const AboutMe = () => {
           <TypeLetters />
         </div>
       </section>
-      <section className="box hover:backdrop-blur-md z-10  w-full sm:w-[40%] flex flex-col justify-start gap-4 text-lg sm:text-xl font-light overflow-auto h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-full">
+      <section className="box hover:backdrop-blur-md z-10 px-3 sm:px-0  w-full sm:w-[40%] flex flex-col justify-start gap-4 text-lg sm:text-xl font-light overflow-auto h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-full">
         {aboutMe.map((item, index) => {
           return (
             <p key={index} className="box text-bondiBlue-40">
