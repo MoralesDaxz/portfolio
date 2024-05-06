@@ -2,6 +2,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { ControlDisplayProvider } from "@/context/ControlDisplay";
+import ToTop from "@/components/ToTop";
 
 export default function RootLayout({
   children,
@@ -41,6 +42,7 @@ export default function RootLayout({
           <NavBar />
           {children}
           <Footer />
+          <ToTop></ToTop>
         </ControlDisplayProvider>
       </body>
     </html>

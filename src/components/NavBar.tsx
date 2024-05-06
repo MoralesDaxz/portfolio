@@ -14,14 +14,14 @@ const NavBar = () => {
 
   const styleMD =
     "z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500";
-  const { bgNavBar, windowWidth } = useControlDisplay();
+  const { windowWidth, windowScroll } = useControlDisplay();
 
   return (
     <>
       {windowWidth > 640 ? (
         <div
           className={
-            bgNavBar
+            windowScroll > 40
               ? `z-20 bg-[#02171fad] py-3 backdrop-blur-sm ${styleMD}`
               : styleMD
           }

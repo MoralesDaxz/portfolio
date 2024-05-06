@@ -12,26 +12,26 @@ import {
 type ControlProps = {
   closeModal: boolean;
   setCloseModal: Dispatch<SetStateAction<boolean>>;
-  bgNavBar: boolean;
-  setBgNavBar: Dispatch<SetStateAction<boolean>>;
   windowWidth: number;
   setWindowWidth: Dispatch<SetStateAction<number>>;
+  windowScroll: number;
+  setWindowScroll: Dispatch<SetStateAction<number>>;
 };
 
 export const ControlDisplay = createContext<ControlProps>({
   closeModal: false,
   setCloseModal: () => {},
-  bgNavBar: false,
-  setBgNavBar: () => {},
   windowWidth: 0,
   setWindowWidth: () => {},
+  windowScroll: 0,
+  setWindowScroll: () => {},
 });
 export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [closeModal, setCloseModal] = useState<boolean>(true);
-  const [bgNavBar, setBgNavBar] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [windowScroll, setWindowScroll] = useState<number>(0);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth * 1);
@@ -42,7 +42,7 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
       };
 
       const handleScroll = () => {
-        window.scrollY > 40 ? setBgNavBar(true) : setBgNavBar(false);
+        setWindowScroll(window.scrollY);
         return;
       };
       window.addEventListener("resize", () => handleResize());
@@ -59,10 +59,10 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
       value={{
         closeModal,
         setCloseModal,
-        bgNavBar,
-        setBgNavBar,
         windowWidth,
         setWindowWidth,
+        windowScroll,
+        setWindowScroll,
       }}
     >
       {children}

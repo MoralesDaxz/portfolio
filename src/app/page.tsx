@@ -6,6 +6,7 @@ import BackgroundStars from "@/components/BackgroundStars";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ToTop from "@/components/ToTop";
 const Home = () => {
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <>
       <BackgroundStars />
+        {/* <ToTop></ToTop> */}
       <main>
         <Landing container={container}/>
       </main>
