@@ -42,7 +42,7 @@ export default function RootLayout({
           <NavBar />
           {children}
           <Footer />
-          <ToTop></ToTop>
+          <ToTop/>
         </ControlDisplayProvider>
       </body>
     </html>

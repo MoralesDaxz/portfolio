@@ -8,12 +8,11 @@ const ToTop = () => {
     <>
       {windowScroll > 500 && windowWidth < 640 ? (
         <div
-          onClick={() => {
+          onClick={() =>
             window.scrollTo({
               top: 0,
-            });
-            
-          }}
+            })
+          }
           className="fixed bottom-2 right-2 z-30 opacity-60 flex flex-col"
         >
           <RxDoubleArrowUp size={"1.5rem"} title="Top" />
