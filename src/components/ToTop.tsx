@@ -12,6 +12,7 @@ const ToTop = () => {
             window.scrollTo({
               top: 0,
             });
+            
           }}
           className="fixed bottom-2 right-2 z-30 opacity-60 flex flex-col"
         >

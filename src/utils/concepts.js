@@ -7,11 +7,11 @@ const aboutMe = [
 ];
 
 const cafeAlturaData = {
-  title: "Cafe de Altura",
-  prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente. Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de Gamma Tech School.",
+  title: "Cafe con Aroma",
+  prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente (empresa comercializadora de café). Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de Gamma Tech School.",
   img: "https://i.ibb.co/FBP4qC6/cafe.png",
-  alt: "cafe_altura",
-  url: "https://coffeedealtura.netlify.app/",
+  alt: "cafe_aroma",
+  url: "https://cafeconaroma.netlify.app/",
   skills: ["React", "Api", "TailwindCSS", "Library"],
 };
 const globalLogisticData = {
