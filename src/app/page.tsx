@@ -16,7 +16,7 @@ const Home = () => {
       gsap.fromTo(
         ".box",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.4 }
+        { opacity: 1, y: 0, stagger: 0.3 }
       );
     },
     { scope: container }
