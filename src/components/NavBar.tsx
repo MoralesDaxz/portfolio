@@ -13,7 +13,7 @@ const NavBar = () => {
   ];
 
   const styleMD =
-    "z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500";
+    "z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-300";
   const { windowWidth, windowScroll } = useControlDisplay();
 
   return (

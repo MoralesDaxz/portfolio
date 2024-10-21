@@ -5,6 +5,7 @@ import {
   aujData,
   cafeAlturaData,
   globalLogisticData,
+  gtsData,
   pokemonData,
 } from "../utils/concepts";
 
@@ -19,6 +20,25 @@ const Projects = () => {
           Proyectos Desarrollados
         </h2>
         <article className="w-full flex flex-wrap gap-y-4 sm:gap-x-3 md:gap-x-5 justify-center ">
+        <CardProject
+            title={gtsData.title}
+            ruteProject={gtsData.url}
+            altImg={gtsData.alt}
+            srcImg={gtsData.img}
+            prf={gtsData.prf}
+          >
+            {gtsData.skills.map((item, index) => {
+              return (
+                <TagSkill
+                  classTag={"text-bondiBlue-500 items-center"}
+                  key={item}
+                  title={item}
+                  show={true}
+                />
+              );
+            })}
+          </CardProject>
+
           <CardProject
             title={cafeAlturaData.title}
             ruteProject={cafeAlturaData.url}

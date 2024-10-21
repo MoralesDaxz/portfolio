@@ -5,7 +5,14 @@ const aboutMe = [
 
   "Estoy ansioso por aplicar las habilidades y destrezas que he adquirido en un entorno laboral.",
 ];
-
+const gtsData = {
+  title: "GTServicios",
+  prf: "Proyecto realizado en NextJS, librerías (Carousel, Form) para cliente de empresa logística, paquetería y servicios.",
+  img: "https://i.ibb.co/Fs5bYCW/gtservicios.jpg",
+  alt: "gts",
+  url: "https://gtservicios.vercel.app/",
+  skills: ["NextJS", "Typescript", "TailwindCSS", "Library","CSS",],
+};
 const cafeAlturaData = {
   title: "Cafe con Aroma",
   prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente (empresa comercializadora de café). Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de Gamma Tech School.",
@@ -48,12 +55,15 @@ const skills = [
   "Postman",
   "GitHub",
   "Libraries",
+  "NextJS"
 ];
 export {
+  gtsData,
   cafeAlturaData,
   globalLogisticData,
   pokemonData,
   aujData,
   aboutMe,
   skills,
+
 };

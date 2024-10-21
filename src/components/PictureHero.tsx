@@ -17,7 +17,7 @@ const PictureHero = () => {
         width={0}
         height={0}
         alt="pic"
-        className="cursor-pointer mainPic w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-500"
+        className="cursor-pointer mainPic w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-300"
       />
       <div
         className={modalPic ? modalClass : `${modalClass} opacity-0 w-[0px]`}
@@ -28,7 +28,7 @@ const PictureHero = () => {
           title="GitHub"
           target="_blank"
         >
-          <FaGithub className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500" />
+          <FaGithub className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
         </Link>
         <Link
           className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700"
@@ -38,7 +38,7 @@ const PictureHero = () => {
           title="Linkedin"
           target="_blank"
         >
-          <FaLinkedin className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500" />
+          <FaLinkedin className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
         </Link>
         <Link
           className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700"
@@ -48,7 +48,7 @@ const PictureHero = () => {
           title="Curriculum"
           target="_blank"
         >
-          <IoDocumentAttach className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-500" />
+          <IoDocumentAttach className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
         </Link>
       </div>
     </div>

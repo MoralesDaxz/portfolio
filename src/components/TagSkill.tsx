@@ -10,6 +10,7 @@ import { MdLibraryAdd } from "react-icons/md";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
 type Prop = {
   title?: string;
   classTag?: string;
@@ -45,6 +46,8 @@ const TagSkill: FC<Prop> = ({
       <SiPostman size={sizeImg} color="#FF6C37" />
     ) : title == "GitHub" ? (
       <FaGithub size={sizeImg} color="#5A5A5A" />
+    ) : title == "NextJS" ? (
+      <TbBrandNextjs size={sizeImg} color="#FFFFFF" />
     ) : title == "Library" || "Libraries" ? (
       <MdLibraryAdd size={sizeImg} color="#94A3B8" />
     ) : (
