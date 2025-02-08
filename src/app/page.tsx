@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ToTop from "@/components/ToTop";
+import NavBar from "@/components/NavBar";
 const Home = () => {
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -16,17 +17,17 @@ const Home = () => {
       gsap.fromTo(
         ".box",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.3 }
+        { opacity: 1, y: 0, stagger: 0.2 }
       );
     },
     { scope: container }
   ); // <-- magic;
   return (
     <>
-      <BackgroundStars />
-        {/* <ToTop></ToTop> */}
+     {/*  <BackgroundStars /> */}
       <main>
-        <Landing container={container}/>
+        <NavBar/>
+        <Landing container={container} />
       </main>
     </>
   );
