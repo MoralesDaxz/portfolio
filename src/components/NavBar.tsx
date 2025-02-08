@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { NavMovil } from "./NavMovil";
 import Image from "next/image";
-import { useControlDisplay } from "@/context/ControlDisplay";
+import { useControlDisplay } from "../context/ControlDisplay";
 
 const NavBar = () => {
   const route = [
@@ -48,9 +48,9 @@ const NavBar = () => {
             );
           })}
         </div>
-      ) : (
+      ) : windowWidth < 640 ? (
         <NavMovil />
-      )}
+      ) : null}
     </>
   );
 };

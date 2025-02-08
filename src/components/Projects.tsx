@@ -30,7 +30,7 @@ const Projects = () => {
             {gtsData.skills.map((item, index) => {
               return (
                 <TagSkill
-                  classTag={"text-bondiBlue-500 items-center"}
+                  classTag={"text-bondiBlue-500"}
                   key={item}
                   title={item}
                   show={true}
@@ -49,7 +49,7 @@ const Projects = () => {
             {cafeAlturaData.skills.map((item, index) => {
               return (
                 <TagSkill
-                  classTag={"text-bondiBlue-500 items-center"}
+                  classTag={"text-bondiBlue-500"}
                   key={item}
                   title={item}
                   show={true}
@@ -68,7 +68,7 @@ const Projects = () => {
             {globalLogisticData.skills.map((item, index) => {
               return (
                 <TagSkill
-                  classTag={"text-bondiBlue-500 items-center"}
+                  classTag={"text-bondiBlue-500"}
                   key={item}
                   title={item}
                   show={true}
@@ -87,7 +87,7 @@ const Projects = () => {
             {pokemonData.skills.map((item, index) => {
               return (
                 <TagSkill
-                  classTag={"text-bondiBlue-500 items-center"}
+                  classTag={"text-bondiBlue-500"}
                   key={item}
                   title={item}
                   show={true}
@@ -106,7 +106,7 @@ const Projects = () => {
             {aujData.skills.map((item, index) => {
               return (
                 <TagSkill
-                  classTag={"text-bondiBlue-500 items-center"}
+                  classTag={"text-bondiBlue-500"}
                   key={item}
                   title={item}
                   show={true}

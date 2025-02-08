@@ -1,3 +1,4 @@
+
 "use client";
 import {
   useState,
@@ -34,15 +35,15 @@ export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
   const [windowScroll, setWindowScroll] = useState<number>(0);
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setWindowWidth(window.innerWidth * 1);
+      setWindowWidth(Number(window.innerWidth));
 
       const handleResize = () => {
-        setWindowWidth(window.innerWidth * 1);
+        setWindowWidth(Number(window.innerWidth));
         return;
       };
 
       const handleScroll = () => {
-        setWindowScroll(window.scrollY);
+        setWindowScroll(Number(window.scrollY));
         return;
       };
       window.addEventListener("resize", () => handleResize());

@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
       <body>
         <ControlDisplayProvider>
-          <NavBar />
+          {/* <NavBar /> */}
           {children}
           <Footer />
           <ToTop/>
