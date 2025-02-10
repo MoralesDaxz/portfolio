@@ -8,7 +8,7 @@ import Link from "next/link";
 const PictureHero = () => {
   const [modalPic, setModalPic] = useState(false);
   const modalClass =
-    "modalPic transition-all duration-700 absolute top-12 sm:top-14 left-[74%] sm:left-[80%] md:left-[72%]  h-[150px] w-[80px] flex flex-col items-center justify-around ";
+    "modalPicture transition-all duration-700 absolute top-12 sm:top-14 left-[74%] sm:left-[80%] md:left-[72%]  h-[150px] w-[80px] flex flex-col items-center justify-around ";
   return (
     <div>
       <Image

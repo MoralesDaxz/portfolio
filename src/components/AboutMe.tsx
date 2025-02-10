@@ -1,4 +1,4 @@
-import { aboutMe } from "@/utils/concepts";
+import { aboutMe } from "@/utils/information/aboutMe";
 import React from "react";
 import PictureHero from "./PictureHero";
 import { TypeLetters } from "./TypeLetters";

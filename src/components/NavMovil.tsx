@@ -16,7 +16,7 @@ const NavMovil = () => {
   ];
 
   const styleSM =
-    "bgGradient absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
+    "gradientNavMovil absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
   const classLinkActive =
     "text-2xl font-light text-[white] opacity-80 hover:opacity-100 ";
   return (

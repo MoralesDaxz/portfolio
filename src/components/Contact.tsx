@@ -6,7 +6,7 @@ import FormSend from "./FormSend";
 const Contact = () => {
   const [registered, setRegistered] = useState(false);
   return (
-    <article className="box w-full" id="contacto">
+    <article className="box w-full" id="contact">
       <section className="w-full flex flex-col items-center py-4 px-5">
         <h2 className="box w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[3rem] pb-[2rem]">
           Contactame

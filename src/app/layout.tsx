@@ -1,5 +1,4 @@
 import "./globals.css";
-import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { ControlDisplayProvider } from "@/context/ControlDisplay";
 import ToTop from "@/components/ToTop";
@@ -39,7 +38,6 @@ export default function RootLayout({
       </head>
       <body>
         <ControlDisplayProvider>
-          {/* <NavBar /> */}
           {children}
           <Footer />
           <ToTop/>

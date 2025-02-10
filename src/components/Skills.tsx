@@ -1,5 +1,5 @@
 "use client";
-import { skills } from "@/utils/concepts";
+import { skills } from "@/utils/information/skills";
 import React from "react";
 import TagSkill from "./TagSkill";
 import { useControlDisplay } from "@/context/ControlDisplay";
@@ -7,7 +7,7 @@ import { useControlDisplay } from "@/context/ControlDisplay";
 const Skills = () => {
   const { windowWidth } = useControlDisplay();
   return (
-    <article className="box w-full" id="habilidades">
+    <article className="box w-full" id="skill">
       <h2 className="box w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] pb-[2rem] ">
         Habilidades
       </h2>

@@ -2,12 +2,12 @@ import React from "react";
 import TagSkill from "./TagSkill";
 import CardProject from "./CardProject";
 import {
-  aujData,
-  cafeAlturaData,
-  globalLogisticData,
-  gtsData,
-  pokemonData,
-} from "../utils/concepts";
+  auj,
+  cafeAltura,
+  globalLogistic,
+  gts,
+  pokemon,
+} from "../utils/information/proyects";
 
 const Projects = () => {
   return (
@@ -21,13 +21,13 @@ const Projects = () => {
         </h2>
         <article className="w-full flex flex-wrap gap-y-4 sm:gap-x-3 md:gap-x-5 justify-center ">
         <CardProject
-            title={gtsData.title}
-            ruteProject={gtsData.url}
-            altImg={gtsData.alt}
-            srcImg={gtsData.img}
-            prf={gtsData.prf}
+            title={gts.title}
+            ruteProject={gts.url}
+            altImg={gts.alt}
+            srcImg={gts.img}
+            prf={gts.prf}
           >
-            {gtsData.skills.map((item, index) => {
+            {gts.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
@@ -40,13 +40,13 @@ const Projects = () => {
           </CardProject>
 
           <CardProject
-            title={cafeAlturaData.title}
-            ruteProject={cafeAlturaData.url}
-            altImg={cafeAlturaData.alt}
-            srcImg={cafeAlturaData.img}
-            prf={cafeAlturaData.prf}
+            title={cafeAltura.title}
+            ruteProject={cafeAltura.url}
+            altImg={cafeAltura.alt}
+            srcImg={cafeAltura.img}
+            prf={cafeAltura.prf}
           >
-            {cafeAlturaData.skills.map((item, index) => {
+            {cafeAltura.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
@@ -59,13 +59,13 @@ const Projects = () => {
           </CardProject>
 
           <CardProject
-            title={globalLogisticData.title}
-            ruteProject={globalLogisticData.url}
-            altImg={globalLogisticData.alt}
-            srcImg={globalLogisticData.img}
-            prf={globalLogisticData.prf}
+            title={globalLogistic.title}
+            ruteProject={globalLogistic.url}
+            altImg={globalLogistic.alt}
+            srcImg={globalLogistic.img}
+            prf={globalLogistic.prf}
           >
-            {globalLogisticData.skills.map((item, index) => {
+            {globalLogistic.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
@@ -78,13 +78,13 @@ const Projects = () => {
           </CardProject>
 
           <CardProject
-            title={pokemonData.title}
-            ruteProject={pokemonData.url}
-            altImg={pokemonData.alt}
-            srcImg={pokemonData.img}
-            prf={pokemonData.prf}
+            title={pokemon.title}
+            ruteProject={pokemon.url}
+            altImg={pokemon.alt}
+            srcImg={pokemon.img}
+            prf={pokemon.prf}
           >
-            {pokemonData.skills.map((item, index) => {
+            {pokemon.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
@@ -97,13 +97,13 @@ const Projects = () => {
           </CardProject>
 
           <CardProject
-            title={aujData.title}
-            ruteProject={aujData.url}
-            altImg={aujData.alt}
-            srcImg={aujData.img}
-            prf={aujData.prf}
+            title={auj.title}
+            ruteProject={auj.url}
+            altImg={auj.alt}
+            srcImg={auj.img}
+            prf={auj.prf}
           >
-            {aujData.skills.map((item, index) => {
+            {auj.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
