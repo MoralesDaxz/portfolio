@@ -11,7 +11,7 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-type Prop = {
+interface TagSkillProp  {
   title: string;
   classTag?: string;
   children?: ReactElement;
@@ -19,19 +19,19 @@ type Prop = {
   show?: boolean;
 };
 
-const TagSkill: FC<Prop> = ({
+const TagSkill: FC<TagSkillProp> = ({
   title,
   classTag,
   children,
   show,
-  sizeImg = "1.2rem",
+  sizeImg="1.5rem",
 }) => {
   const [showSkill, setShowSkill] = useState(false);
   const getIconTag = (title: string): ReactElement | null => {
     switch (title) {
       case "React":
         return <FaReact size={sizeImg} color="#0a7994" />;
-      case "TailwindCSS":
+      case "Tailwind":
         return <SiTailwindcss size={sizeImg} color="#38BDF8" />;
       case "Api":
         return <FaGear size={sizeImg} color="#94A3B8" />;
@@ -66,7 +66,7 @@ const TagSkill: FC<Prop> = ({
     <div
       onMouseEnter={() => setShowSkill(true)}
       onMouseLeave={() => setShowSkill(false)}
-      className={`flex gap-1 font-normal text-[.8rem] sm:text-[.9rem] lg:text-[1rem] ${classTag}`}
+      className={`flex items-center gap-1 font-normal text-[.7rem] sm:text-[.8rem] lg:text-[.9rem] border-t-[3px] border-t-bondiBlue-800 rounded-full p-2 ${classTag}`}
     >
       {iconTag}
       {children}

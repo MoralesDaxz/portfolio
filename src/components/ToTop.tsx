@@ -1,6 +1,6 @@
 "use client";
-import { useControlDisplay } from "@/context/ControlDisplay";
 import React from "react";
+import { useControlDisplay } from "@/context/ControlDisplay";
 import { RxDoubleArrowUp } from "react-icons/rx";
 const ToTop = () => {
   const { windowScroll, windowWidth } = useControlDisplay();
@@ -18,9 +18,7 @@ const ToTop = () => {
           <RxDoubleArrowUp size={"1.5rem"} title="Top" />
           <p>Top</p>
         </div>
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 };

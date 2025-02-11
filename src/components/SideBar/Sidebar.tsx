@@ -1,13 +1,13 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, ReactNode, useState } from "react";
 import TabLink from "./TabLink";
-import { infoTab } from "../utils/examples";
+import { infoTab } from "@/utils/sidebar/examples";
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 const SideBar: FC<Props> = ({ children }) => {
-  const [active, isActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const defaultSide =
     "min-h-screen bg-[#383737] transition-all duration-500 ease-out p-2";
   const openSide = `${defaultSide} w-[300px] max-w-[350px]`;
@@ -16,15 +16,15 @@ const SideBar: FC<Props> = ({ children }) => {
   return (
     <section className="w-full min-h-[350px] bg-[#383737] text-white flex justify-between">
       <section
-        className={active ? openSide : closeSide}
-        onMouseEnter={() => isActive(true)}
-        onMouseLeave={() => isActive(false)}
+        className={isActive ? openSide : closeSide}
+        onMouseEnter={() => setIsActive(true)}
+        onMouseLeave={() => setIsActive(false)}
       >
         <section className="flex flex-col gap-3 pt-10">
           {infoTab.map((tab, i) => {
             return (
               <TabLink
-                active={active}
+                isActive={isActive}
                 url={tab.url}
                 title={tab.title}
                 srcImg={tab.img}

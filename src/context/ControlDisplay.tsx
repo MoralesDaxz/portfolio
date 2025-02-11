@@ -8,6 +8,7 @@ import {
   useEffect,
   FC,
   useContext,
+  ReactNode,
 } from "react";
 
 type ControlProps = {
@@ -27,7 +28,7 @@ export const ControlDisplay = createContext<ControlProps>({
   windowScroll: 0,
   setWindowScroll: () => {},
 });
-export const ControlDisplayProvider: FC<{ children: React.ReactNode }> = ({
+export const ControlDisplayProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [closeModal, setCloseModal] = useState<boolean>(true);

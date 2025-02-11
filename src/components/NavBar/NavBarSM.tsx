@@ -1,22 +1,19 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
-import menu from "../assets/menu.svg";
-import close from "../assets/close.svg";
+import React, { FC, useState } from "react";
+import menu from "@/assets/icons/menu.svg";
+import close from "@/assets/icons/menu.svg";
 import Image from "next/image";
 import { useControlDisplay } from "@/context/ControlDisplay";
-
-const NavMovil = () => {
+interface NavBarProps {
+  route: { link: string; title: string }[];
+}
+const NavBarSM:FC<NavBarProps> = ({route}) => {
   const { closeModal, setCloseModal } = useControlDisplay();
   const [chooseLink, setChooseLink] = useState("");
-  const route = [
-    { link: "#proyectos", title: "Proyectos" },
-    { link: "#contacto", title: "Contacto" },
-    { link: "#habilidades", title: "Habilidades" },
-  ];
 
   const styleSM =
-    "gradientNavMovil absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
+    "gradientNavBarMovil absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
   const classLinkActive =
     "text-2xl font-light text-[white] opacity-80 hover:opacity-100 ";
   return (
@@ -81,4 +78,4 @@ const NavMovil = () => {
   );
 };
 
-export { NavMovil };
+export default NavBarSM ;

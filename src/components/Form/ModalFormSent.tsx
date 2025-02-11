@@ -2,7 +2,7 @@ import React, { FC } from "react";
 type Props = {
   registered: boolean;
 };
-const FormSend: FC<Props> = ({ registered }) => {
+const FormSent: FC<Props> = ({ registered }) => {
   return (
     <div
       className={`w-[80%] sm:w-[60%] md:w-[40%] absolute flex flex-col items-center ${
@@ -22,4 +22,4 @@ const FormSend: FC<Props> = ({ registered }) => {
   );
 };
 
-export default FormSend;
+export default FormSent;

@@ -8,9 +8,9 @@ const TypeLetters = () => {
         sequence={[
           "Piensa en lo que quieres lograr",
           2000,
-          "Desarrolla lo que imaginas con pasion",
+          "Desarrolla con pasion lo que imaginas ",
           2000,
-          "Implementa y perfecciona cada paso",
+          "Perfecciona e implementa en cada paso",
           2000,
           "Disfruta tus logros, es tú momento!",
           2000,

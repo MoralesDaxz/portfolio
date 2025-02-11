@@ -1,12 +1,13 @@
 import "./globals.css";
-import { Footer } from "@/components/Footer";
-import { ControlDisplayProvider } from "@/context/ControlDisplay";
+import Footer from "@/components/Footer";
 import ToTop from "@/components/ToTop";
+import { ControlDisplayProvider } from "@/context/ControlDisplay";
+import { ReactNode } from "react";
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="ES">

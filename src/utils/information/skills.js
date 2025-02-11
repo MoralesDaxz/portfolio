@@ -3,11 +3,11 @@ const skills = [
   "CSS",
   "JavaScript",
   "React",
+  "NextJS",
   "Typescript",
-  "TailwindCSS",
+  "Tailwind",
   "Postman",
   "GitHub",
   "Libraries",
-  "NextJS",
 ];
 export { skills };

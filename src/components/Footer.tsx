@@ -30,4 +30,4 @@ const Footer = () => {
     </div>
   );
 };
-export { Footer };
+export default Footer ;

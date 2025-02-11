@@ -4,7 +4,7 @@ const gts = {
   img: "https://i.ibb.co/Fs5bYCW/gtservicios.jpg",
   alt: "gts",
   url: "https://gtservicios.vercel.app/",
-  skills: ["NextJS", "Typescript", "TailwindCSS", "Library", "CSS"],
+  skills: ["NextJS", "Typescript", "Tailwind", "Library", "CSS"],
 };
 const cafeAltura = {
   title: "Cafe con Aroma",
@@ -12,7 +12,7 @@ const cafeAltura = {
   img: "https://i.ibb.co/VJTgNjV/cafeconaroma.png",
   alt: "cafe_aroma",
   url: "https://cafeconaroma.vercel.app/",
-  skills: ["React", "Api", "TailwindCSS", "Library"],
+  skills: ["React", "Api", "Tailwind", "Library"],
 };
 const globalLogistic = {
   title: "Global Logistic",
@@ -20,7 +20,7 @@ const globalLogistic = {
   img: "https://i.ibb.co/n7GNGTB/globallogistic.png",
   alt: "global_logistic",
   url: "https://global-logistic-final.vercel.app/",
-  skills: ["React", "TailwindCSS", "Library"],
+  skills: ["React", "Tailwind", "Library"],
 };
 const pokemon = {
   title: "Pokemon Store",
@@ -36,6 +36,6 @@ const auj = {
   img: "https://i.ibb.co/vhjj1zK/204338.png",
   alt: "adoptaunjunior",
   url: "https://adoptaunjunior.es/",
-  skills: ["React", "Typescript", "TailwindCSS", "Library"],
+  skills: ["React", "Typescript", "Tailwind", "Library"],
 };
 export { gts, cafeAltura, globalLogistic, pokemon, auj };

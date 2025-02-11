@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC, ReactNode } from "react";
 
-type Prop = {
+interface CardProjectProp  {
   ruteProject: string;
   title: string;
   srcImg: string;
@@ -10,7 +10,7 @@ type Prop = {
   prf: string;
   children: ReactNode;
 };
-const CardProject: FC<Prop> = ({
+const CardProject: FC<CardProjectProp> = ({
   ruteProject,
   title,
   srcImg,
@@ -23,7 +23,7 @@ const CardProject: FC<Prop> = ({
       <Link
         href={ruteProject}
         target="_blank"
-        className="box group/card flex flex-col justify-between gap-4 items-center w-[90%] sm:max-w-[900px] sm:w-[45%] border-2 border-bondiBlue-900 hover:border-bondiBlue-500 hover:shadow-bondiBlue-800 hover:shadow-lg p-1 focus-within:border-bondiBlue-500 focus-within:shadow-bondiBlue-800 focus-within:shadow-lg rounded-md transition-all duration-700 outline-none sm:p-3"
+        className="box group/card flex flex-col justify-between gap-4 items-center w-[90%] sm:max-w-[900px] sm:w-[40%] border-2 border-bondiBlue-900 hover:border-bondiBlue-500 hover:shadow-bondiBlue-800 hover:shadow-lg p-1 focus-within:border-bondiBlue-500 focus-within:shadow-bondiBlue-800 focus-within:shadow-lg rounded-md transition-all duration-700 outline-none sm:p-3"
       >
         <h2 className="text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] font-medium text-bondiBlue-40">
           {title}

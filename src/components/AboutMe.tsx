@@ -1,6 +1,6 @@
-import { aboutMe } from "@/utils/information/aboutMe";
 import React from "react";
 import PictureHero from "./PictureHero";
+import { aboutMe } from "@/utils/information/aboutMe";
 import { TypeLetters } from "./TypeLetters";
 
 const AboutMe = () => {

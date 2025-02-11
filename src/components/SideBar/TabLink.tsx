@@ -1,10 +1,17 @@
-'use client'
+"use client";
+
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-type Props = { url: string; title: string; srcImg: string; active: boolean };
-const TabLink: FC<Props> = ({ url, title, active, srcImg }) => {
-  const defaultTab = "group-hover/track:pl-1 transition-all duration-300 font-medium";
+interface TabProps {
+  url: string;
+  title: string;
+  srcImg: string;
+  isActive: boolean;
+}
+const TabLink: FC<TabProps> = ({ url, title, isActive, srcImg }) => {
+  const defaultTab =
+    "group-hover/track:pl-1 transition-all duration-300 font-medium";
   const openTab = `${defaultTab} w-fit max-w-[350px] opacity-100`;
   const closeTab = `${defaultTab} w-[0px] opacity-0 `;
   return (
@@ -18,7 +25,7 @@ const TabLink: FC<Props> = ({ url, title, active, srcImg }) => {
           className="w-[25px] h-[25px] rounded-sm text-center"
         />
 
-        <p className={active ? openTab : closeTab}>{title}</p>
+        <p className={isActive ? openTab : closeTab}>{title}</p>
       </Link>
     </>
   );
