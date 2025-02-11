@@ -7,19 +7,20 @@ const BackgroundEffect = () => {
   const currentPos = useRef({ x: 0, y: 0 });
   // Diámetro de la esfera (debe coincidir con las clases de Tailwind)
   const circleDiameter = 300;
-
+ 
   useEffect(() => {
     // Función de easing para suavizar la transición (easeInOutQuad)
     const easeInOutQuad = (t: number) =>
       t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 
     function animateMove() {
+      
       if (!circleRef.current) return;
 
       // Obtener límites: ancho de la ventana y alto total del documento
       const landingWidth = window.innerWidth;
       const landingHeight = document.body.scrollHeight;
-
+   
       // Calcular límites para que la esfera se mantenga dentro del contenedor
       const maxX = Math.max(landingWidth - circleDiameter, 0);
       const maxY = Math.max(landingHeight - circleDiameter, 0);
@@ -61,6 +62,7 @@ const BackgroundEffect = () => {
           // Al finalizar la animación, se inicia un nuevo movimiento
           animateMove();
         }
+        
       };
 
       requestAnimationFrame(step);
@@ -83,7 +85,7 @@ const BackgroundEffect = () => {
 
     // Inicia la animación continua
     animateMove();
-
+   
     // Cleanup (opcional)
     return () => {
       // Aquí podrías cancelar la animación si fuese necesario
@@ -91,7 +93,8 @@ const BackgroundEffect = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 -z-10 pointer-events-none">
+    /* min-w-[300px] max-w-[350px] md:min-w-[400px] md:max-w-[650px] lg:min-w-[650px] lg:max-w-max */
+    <div className="box absolute inset-0 -z-10 pointer-events-none">
       <div
         ref={circleRef}
         className="w-[300px] h-[300px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-40"

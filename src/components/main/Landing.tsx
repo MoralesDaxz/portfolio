@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,8 +8,10 @@ import Skills from "../skills/Skills";
 import Projects from "../projects/Projects";
 import BackgroundEffect from "./BackgroundEffect";
 import Contact from "../form/Contact";
+import { useControlDisplay } from "@/context/ControlDisplay";
 
 const Landing = () => {
+  const { windowWidth, windowScroll } = useControlDisplay();
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
   let tl = gsap.timeline({ paused: true });
@@ -23,15 +25,21 @@ const Landing = () => {
     },
     { scope: container }
   );
+  useEffect(() => {
+    return () => {
+      windowWidth;
+      windowScroll;
+    };
+  }, [windowWidth, windowScroll]);
   return (
     <>
-      <BackgroundEffect />
       <section
-        className="px-4 sm:px-10 flex flex-col items-center justify-center "
+        className="relative px-4 sm:px-10 flex flex-col items-center justify-center "
         ref={container}
       >
         <AboutMe />
         <Projects />
+        {windowWidth > 640 ? <BackgroundEffect /> : null}
         <Skills />
         <Contact />
       </section>
