@@ -1,6 +1,5 @@
 import "./globals.css";
-import Footer from "@/components/Footer";
-import ToTop from "@/components/ToTop";
+import Footer from "@/components/main/Footer";
 import { ControlDisplayProvider } from "@/context/ControlDisplay";
 import { ReactNode } from "react";
 
@@ -41,7 +40,6 @@ export default function RootLayout({
         <ControlDisplayProvider>
           {children}
           <Footer />
-          <ToTop/>
         </ControlDisplayProvider>
       </body>
     </html>

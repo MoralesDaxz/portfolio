@@ -3,6 +3,7 @@ import React from "react";
 import { useControlDisplay } from "@/context/ControlDisplay";
 import NavBarSM from "./NavBarSM";
 import NavBarMD from "./NavBarMD";
+
 const DisplayNavBar = () => {
   const route = [
     { link: "projects", title: "Proyectos" },
@@ -16,7 +17,8 @@ const DisplayNavBar = () => {
       {windowWidth > 640 ? (
         <NavBarMD windowScroll={windowScroll} route={route} />
       ) : windowWidth < 640 ? (
-        <NavBarSM route={route} />
+        <NavBarSM windowScroll={windowScroll} route={route} />
+        
       ) : null}
     </>
   );

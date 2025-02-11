@@ -3,11 +3,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useRef } from "react";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Contact from "./Contact";
-import AboutMe from "./AboutMe";
-import BackgroundEffect from "@/components/BackgroundEffect";
+import Contact from "../form/Contact";
+import AboutMe from "../aboutMe/AboutMe";
+import Skills from "../skills/Skills";
+import Projects from "../projects/Projects";
+import BackgroundEffect from "./BackgroundEffect";
 
 const Landing = ({}) => {
   const container = useRef(null);

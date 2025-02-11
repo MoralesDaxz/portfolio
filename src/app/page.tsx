@@ -1,6 +1,6 @@
 import React from "react";
-import Landing from "@/components/Landing";
-import DisplayNavBar from "@/components/NavBar/DisplayNavBar";
+import Landing from "@/components/main/Landing";
+import DisplayNavBar from "@/components/navBar/DisplayNavBar";
 
 const Home = () => {
   return (

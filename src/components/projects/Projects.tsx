@@ -1,5 +1,4 @@
 import React from "react";
-import TagSkill from "./TagSkill";
 import CardProject from "./CardProject";
 import {
   auj,
@@ -8,6 +7,7 @@ import {
   gts,
   pokemon,
 } from "@/utils/information/proyects";
+import TagSkill from "../skills/TagSkill";
 
 const Projects = () => {
   return (

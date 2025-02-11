@@ -4,6 +4,7 @@ import { useControlDisplay } from "@/context/ControlDisplay";
 import { skills } from "@/utils/information/skills";
 import TagSkill from "./TagSkill";
 
+
 const Skills = () => {
   const { windowWidth } = useControlDisplay();
   return (

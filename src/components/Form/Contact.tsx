@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Form from "./Form/Form";
-import FormSent from "./Form/ModalFormSent";
+import Form from "./Form";
+import FormSent from "./ModalFormSent";
 
 const Contact = () => {
   const [registered, setRegistered] = useState(false);

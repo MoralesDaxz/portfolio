@@ -1,4 +1,4 @@
-import SideBar from "@/components/SideBar/Sidebar";
+import SideBar from "@/components/sideBar/Sidebar";
 import React from "react";
 
 const page = () => {
