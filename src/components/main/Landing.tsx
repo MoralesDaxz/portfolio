@@ -1,15 +1,15 @@
 "use client";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useRef } from "react";
 import AboutMe from "../aboutMe/AboutMe";
 import Skills from "../skills/Skills";
 import Projects from "../projects/Projects";
 import BackgroundEffect from "./BackgroundEffect";
 import Contact from "../form/Contact";
 
-const Landing = ({}) => {
+const Landing = () => {
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger, useGSAP);
   let tl = gsap.timeline({ paused: true });
