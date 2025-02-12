@@ -23,7 +23,7 @@ const CardProject: FC<CardProjectProp> = ({
       <Link
         href={ruteProject}
         target="_blank"
-        className="box group/card flex flex-col justify-between gap-4 items-center w-[90%] sm:max-w-[900px] sm:w-[40%] border-2 border-bondiBlue-900 hover:border-bondiBlue-500 hover:shadow-bondiBlue-800 hover:shadow-lg p-1 focus-within:border-bondiBlue-500 focus-within:shadow-bondiBlue-800 focus-within:shadow-lg rounded-md transition-all duration-700 outline-none sm:p-3"
+        className="group/card flex flex-col justify-between gap-4 items-center w-[90%] sm:max-w-[900px] sm:w-[40%] border-2 border-bondiBlue-900 hover:border-bondiBlue-500 hover:shadow-bondiBlue-800 hover:shadow-lg p-1 focus-within:border-bondiBlue-500 focus-within:shadow-bondiBlue-800 focus-within:shadow-lg rounded-md transition-all duration-700 outline-none sm:p-3"
       >
         <h2 className="text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] font-medium text-bondiBlue-40">
           {title}

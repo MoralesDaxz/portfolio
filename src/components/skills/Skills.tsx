@@ -8,11 +8,11 @@ import TagSkill from "./TagSkill";
 const Skills = () => {
   const { windowWidth } = useControlDisplay();
   return (
-    <article className="box w-full" id="skill">
-      <h2 className="box w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem] ">
+    <article className="w-full px-4 sm:px-10" id="skill">
+      <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem] ">
         Habilidades
       </h2>
-      <section className="box w-full flex flex-wrap gap-5 justify-center">
+      <section className="w-full flex flex-wrap gap-5 justify-center">
         {skills.map((item, index) => {
           return (
             <div className="cursor-pointer" key={index}>

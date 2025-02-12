@@ -1,7 +1,8 @@
 import "./globals.css";
 import { ControlDisplayProvider } from "@/context/ControlDisplay";
-import Footer from "@/components/main/Footer";
+
 import { ReactNode } from "react";
+
 
 export default function RootLayout({
   children,
@@ -39,7 +40,6 @@ export default function RootLayout({
       <body>
         <ControlDisplayProvider>
           {children}
-          <Footer />
         </ControlDisplayProvider>
       </body>
     </html>

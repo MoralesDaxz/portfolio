@@ -94,7 +94,7 @@ const BackgroundEffect = () => {
 
   return (
     /* min-w-[300px] max-w-[350px] md:min-w-[400px] md:max-w-[650px] lg:min-w-[650px] lg:max-w-max */
-    <div className="box absolute inset-0 -z-10 pointer-events-none">
+    <div className="absolute inset-0 -z-10 pointer-events-none">
       <div
         ref={circleRef}
         className="w-[300px] h-[300px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-40"
