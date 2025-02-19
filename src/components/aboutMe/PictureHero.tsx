@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import pic from "@/assets/picture/Morales.jpg";
@@ -9,7 +9,7 @@ import Link from "next/link";
 const PictureHero = () => {
   const [modalPic, setModalPic] = useState(false);
   const modalClass =
-    "pictureModal transition-all duration-700 absolute top-[12%] left-2 sm:top-[15%] md:left-[5%] lg:left-[10%] h-[150px] w-[80px] flex flex-col items-center justify-around";
+    "pictureModal transition-all duration-700 absolute top-[12%] sm:top-[15%] lg:top-[18%] left-2 md:left-[5%] lg:left-[10%] h-[150px] w-[80px] flex flex-col items-center justify-around";
   return (
     <div>
       <Image
