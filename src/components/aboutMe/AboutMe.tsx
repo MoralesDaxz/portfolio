@@ -5,8 +5,8 @@ import { TypeLetters } from "./TypeLetters";
 
 const AboutMe = () => {
   return (
-    <article id="init" className="w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[8rem] px-4 sm:px-10">
-      <section className="w-full h-full sm:w-[50%] flex flex-col items-center justify-center gap-3 md:gap-4 lg:gap-6">
+    <article id="init" className="relative w-full h-full flex flex-col items-center mt-[5rem] gap-[8%] sm:flex sm:flex-row sm:mt-[8rem] px-4 sm:px-10">
+      <section className="w-full h-full sm:w-[50%] flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-8">
         <h1 className="w-full text-center font-bold text-4xl my-5 sm:my-0 sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3.2rem] text-bondiBlue-400">
           Desarrollador Web
         </h1>

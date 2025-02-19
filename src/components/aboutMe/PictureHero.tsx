@@ -9,7 +9,7 @@ import Link from "next/link";
 const PictureHero = () => {
   const [modalPic, setModalPic] = useState(false);
   const modalClass =
-    "pictureModal transition-all duration-700 absolute top-12 sm:top-14 left-[74%] sm:left-[80%] md:left-[72%]  h-[150px] w-[80px] flex flex-col items-center justify-around ";
+    "pictureModal transition-all duration-700 absolute top-[12%] left-2 sm:top-[15%] md:left-[5%] lg:left-[10%] h-[150px] w-[80px] flex flex-col items-center justify-around";
   return (
     <div>
       <Image
@@ -18,7 +18,7 @@ const PictureHero = () => {
         width={0}
         height={0}
         alt="pic"
-        className="cursor-pointer mainPic w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-300"
+        className="cursor-pointer w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-300"
       />
       <div
         className={modalPic ? modalClass : `${modalClass} opacity-0 w-[0px]`}
