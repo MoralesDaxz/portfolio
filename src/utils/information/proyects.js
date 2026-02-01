@@ -38,4 +38,12 @@ const auj = {
   url: "https://adoptaunjunior.es/",
   skills: ["React", "Typescript", "Tailwind", "Library"],
 };
+const heroes = {
+  title: "Heroes",
+  prf: "Proyecto elaborado a partir del curso 'React: de cero a experto' impartido por Fernando Herrera en Udemy.",
+  img: "https://i.ibb.co/vhjj1zK/204338.png",
+  alt: "heroesApp",
+  url: "https://adoptaunjunior.es/",
+  skills: ["React", "Typescript", "Tailwind", "Library"],
+};
 export { gts, cafeAltura, globalLogistic, pokemon, auj };
