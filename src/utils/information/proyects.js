@@ -4,7 +4,7 @@ const gts = {
   img: "https://i.ibb.co/Fs5bYCW/gtservicios.jpg",
   alt: "gts",
   url: "https://gtservicios.vercel.app/",
-  skills: ["NextJS", "Typescript", "Tailwind", "Library", "CSS"],
+  skills: ["NextJS", "Typescript", "Tailwind", "Library",],
 };
 const cafeAltura = {
   title: "Cafe con Aroma",
@@ -40,10 +40,10 @@ const auj = {
 };
 const heroes = {
   title: "Heroes",
-  prf: "Proyecto elaborado a partir del curso 'React: de cero a experto' impartido por Fernando Herrera en Udemy.",
-  img: "https://i.ibb.co/vhjj1zK/204338.png",
-  alt: "heroesApp",
-  url: "https://adoptaunjunior.es/",
-  skills: ["React", "Typescript", "Tailwind", "Library"],
+  prf: "Proyecto elaborado a partir del curso 'React: de cero a experto' impartido por Fernando Herrera en Udemy, utiliza un backend desarrollado en Nest.",
+  img: "https://i.ibb.co/Ng9PSQH3/heroes.png",
+  alt: "heroApp",
+  url: "https://heroapp-react.netlify.app/",
+  skills: ["React", "Typescript", "Tailwind","Api", "Library"],
 };
-export { gts, cafeAltura, globalLogistic, pokemon, auj };
+export { gts, cafeAltura, globalLogistic, pokemon, auj, heroes };

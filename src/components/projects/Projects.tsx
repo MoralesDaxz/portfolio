@@ -5,6 +5,7 @@ import {
   cafeAltura,
   globalLogistic,
   gts,
+  heroes,
   pokemon,
 } from "@/utils/information/proyects";
 import TagSkill from "../skills/TagSkill";
@@ -104,6 +105,24 @@ const Projects = () => {
             prf={auj.prf}
           >
             {auj.skills.map((item, index) => {
+              return (
+                <TagSkill
+                  classTag={"text-bondiBlue-500"}
+                  key={item}
+                  title={item}
+                  show={true}
+                />
+              );
+            })}
+          </CardProject>
+           <CardProject
+            title={heroes.title}
+            ruteProject={heroes.url}
+            altImg={heroes.alt}
+            srcImg={heroes.img}
+            prf={heroes.prf}
+          >
+            {heroes.skills.map((item, index) => {
               return (
                 <TagSkill
                   classTag={"text-bondiBlue-500"}
