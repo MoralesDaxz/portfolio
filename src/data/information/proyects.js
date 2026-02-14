@@ -8,7 +8,7 @@ const gts = {
 };
 const cafeAltura = {
   title: "Cafe con Aroma",
-  prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente (empresa comercializadora de café). Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de Gamma Tech School.",
+  prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente (empresa comercializadora de café). Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de GammaTech School.",
   img: "https://i.ibb.co/VJTgNjV/cafeconaroma.png",
   alt: "cafe_aroma",
   url: "https://cafeconaroma.vercel.app/",
@@ -24,7 +24,7 @@ const globalLogistic = {
 };
 const pokemon = {
   title: "Pokemon Store",
-  prf: "Proyecto desarrollado con (HTML, CSS, JavaScript), manejo de localStorage para carrito de compras, en su mayoría manipulación desde DOM.",
+  prf: "El proyecto se ha desarrollado utilizando HTML, CSS y JavaScript. Se ha manipulado el localStorage para el carrito de la compra, y se ha hecho uso de DOM en su mayoría.",
   img: "https://i.ibb.co/7y64V52/pokemon.png",
   alt: "pokemon",
   url: "https://pokemonsstore.netlify.app/index.html",
@@ -32,7 +32,7 @@ const pokemon = {
 };
 const auj = {
   title: "AdoptaUnJunior",
-  prf: "Colaboración voluntaria en el desarrollo de página web adoptaunjunior.es, me encargue de la implementación del componente Registro, Login y Recuperar contraseña usando la biblioteca de react-hook-form (useForm) y realizar la integración con el equipo backend, validamos los datos aportados si ya existe en base de datos, en login  valida si es un usuario registrado y con email confirmado, entregas semanales de las implementaciones, con reunios de equipo para sincronizar los cambios y nuevas implementaciones.",
+  prf: "Colaboración voluntaria en el desarrollo de la página web adoptaunjunior.es. Me encargué de implementar el componente de registro, inicio de sesión y recuperación de contraseña con la biblioteca react-hook-form (useForm) y de realizar la integración con el equipo backend. También validamos los datos aportados para comprobar si ya existían en la base de datos. En el inicio de sesión, se comprueba si el usuario está registrado y si tiene el correo electrónico confirmado. Se entregaban informes semanales de las implementaciones y se mantenían reuniones de equipo para sincronizar los cambios y las nuevas implementaciones.",
   img: "https://i.ibb.co/vhjj1zK/204338.png",
   alt: "adoptaunjunior",
   url: "https://adoptaunjunior.es/",
@@ -40,7 +40,7 @@ const auj = {
 };
 const heroes = {
   title: "Heroes",
-  prf: "Proyecto elaborado a partir del curso 'React: de cero a experto' impartido por Fernando Herrera en Udemy, utiliza un backend desarrollado en Nest.",
+  prf: "El proyecto se ha elaborado a partir del curso «React: de cero a experto». Este curso lo imparte Fernando Herrera en Udemy. El backend utilizado ha sido desarrollado en Nest.",
   img: "https://i.ibb.co/Ng9PSQH3/heroes.png",
   alt: "heroApp",
   url: "https://heroapp-react.netlify.app/",

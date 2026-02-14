@@ -7,7 +7,7 @@ interface NavBarProps {
 }
 const NavBarMD: FC<NavBarProps> = ({ windowScroll, route }) => {
   const styleMD =
-    "z-10 w-full fixed top-0 py-2 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-300";
+    "z-10 w-full fixed top-0 py-3 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-300";
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -19,7 +19,7 @@ const NavBarMD: FC<NavBarProps> = ({ windowScroll, route }) => {
     <div
       className={
         windowScroll > 40
-          ? `${styleMD} z-20 bg-[#02171fad] py-3 backdrop-blur-sm `
+          ? `${styleMD} z-20 bg-[#02171fc2] py-4 backdrop-blur-md `
           : styleMD
       }
     >

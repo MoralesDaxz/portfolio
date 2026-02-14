@@ -13,8 +13,7 @@ const FormSent: FC<Props> = ({ registered }) => {
         ¡Genial tengo tu mensaje!
       </p>
       <p className="font-medium text-center text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] text-bondiBlue-40">
-        Le responderé con la mayor brevedad posible, en general, en un lapso de
-        tiempo inferior a 24 horas.
+        Le responderé con la mayor brevedad posible, en general, en un tiempo inferior a 24 horas.
       </p>
       <span className="loader mt-[4rem]"></span>
 

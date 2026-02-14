@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useControlDisplay } from "@/context/ControlDisplay";
-import { skills } from "@/utils/information/skills";
+import { skills } from "@/data/information/skills";
 import TagSkill from "./TagSkill";
 
 

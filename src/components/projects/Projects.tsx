@@ -7,7 +7,7 @@ import {
   gts,
   heroes,
   pokemon,
-} from "@/utils/information/proyects";
+} from "@/data/information/proyects";
 import TagSkill from "../skills/TagSkill";
 
 const Projects = () => {

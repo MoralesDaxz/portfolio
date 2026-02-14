@@ -41,16 +41,14 @@ const PictureHero = () => {
         >
           <FaLinkedin className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
         </Link>
-        <Link
+        <a
           className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700"
-          href={
-            "https://www.dropbox.com/scl/fi/o7tnducqcsqmei1fkz9dk/Alfredo-J-Morales-R-Madrid-28031.pdf?rlkey=bgprwnzvmp2mamr127bdkpg6v&st=9id0eqd8&dl=0"
-          }
+          href="/curriculum/Alfredo Morales - Madrid.pdf"
+          download="Alfredo Morales - Madrid.pdf"
           title="Curriculum"
-          target="_blank"
         >
           <IoDocumentAttach className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
-        </Link>
+        </a>
       </div>
     </div>
   );

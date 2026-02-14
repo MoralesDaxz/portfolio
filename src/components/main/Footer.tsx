@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="w-full overflow-hidden">
       <p className="w-full text-center relative bottom-[-3.5rem] z-10 text-bondiBlue-40 font-extralight text-[.7rem] sm:text-[.8rem] lg:text-[.9rem] ">
-        Portafolio Desarrollador Web - 2024
+        Portafolio Desarrollador Web - {new Date().getFullYear()}
       </p>
       <svg
         preserveAspectRatio="none"

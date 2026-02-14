@@ -2,7 +2,7 @@
 
 import React, { FC, ReactNode, useState } from "react";
 import TabLink from "./TabLink";
-import { infoTab } from "@/utils/sidebar/examples";
+import { infoTab } from "@/data/sidebar/examples";
 type Props = {
   children: ReactNode;
 };
