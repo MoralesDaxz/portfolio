@@ -1,8 +1,10 @@
 const aboutMe = [
-  "Desde corta edad me ha inquietado la tecnología me encanta estar en constante aprendizaje, poseo estudios superiores en computación e informática, tengo una trayectoria como soporte IT y para fortalecer mi perfil tecnológico completé un Bootcamp de Desarrollo Web 500 horas, he participado en construcción de páginas (landing, formularios), en cursos especializados en maquetación de páginas web, adquiriendo habilidades en diferentes tecnologías.",
+  "Cuento con formación superior en Computación e Informática y experiencia profesional en soporte IT, donde he desarrollado habilidades en gestión de incidencias, atención al usuario y documentación de procesos técnicos. Con el objetivo de fortalecer mi perfil tecnológico, completé un Bootcamp de Desarrollo Web (500 horas + 100 horas prácticas), ampliando mis conocimientos en desarrollo frontend y construcción de soluciones web.",
 
-  "Además, he llevado a cabo un proceso autodidacta de enriquecimiento, he construido mini proyectos que han solidificado mi comprensión, lo que ha proporcionado una base sólida y estructurada para mis conocimientos.",
+  "He participado en la creación de páginas web, landing pages y formularios interactivos, además de realizar formación especializada en maquetación web. Trabajo con tecnologías como HTML, CSS, Tailwind, JavaScript, TypeScript, React, Next.js, API REST y Java.",
 
-  "Estoy ansioso por aplicar las habilidades y destrezas que he adquirido en un entorno laboral.",
+  "De forma autodidacta continúo desarrollando proyectos propios que refuerzan y consolidan mis conocimientos, manteniendo un aprendizaje constante orientado a la mejora continua y la resolución de problemas reales.",
+  
+  "Mi objetivo es aportar mis conocimientos técnicos, capacidad de aprendizaje y experiencia en soporte y desarrollo dentro de un entorno profesional donde pueda seguir creciendo y contribuyendo activamente al equipo."
 ];
 export { aboutMe };

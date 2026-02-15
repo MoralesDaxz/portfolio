@@ -1,4 +1,4 @@
-const skills = [
+export const stackTech = [
   "HTML",
   "CSS",
   "JavaScript",
@@ -10,4 +10,4 @@ const skills = [
   "GitHub",
   "Libraries",
 ];
-export { skills };
+

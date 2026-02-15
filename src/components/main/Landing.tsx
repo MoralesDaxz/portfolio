@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AboutMe from "../aboutMe/AboutMe";
-import Skills from "../skills/Skills";
+import Skills from "../technologies/Technologies";
 import Projects from "../projects/Projects";
 import Contact from "../form/Contact";
 import Footer from "@/components/main/Footer";

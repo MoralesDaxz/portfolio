@@ -11,7 +11,7 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-interface TagSkillProp  {
+interface TagTechProp  {
   title: string;
   classTag?: string;
   children?: ReactElement;
@@ -19,14 +19,14 @@ interface TagSkillProp  {
   show?: boolean;
 };
 
-const TagSkill: FC<TagSkillProp> = ({
+const TagTech: FC<TagTechProp> = ({
   title,
   classTag,
   children,
   show,
   sizeImg="1.5rem",
 }) => {
-  const [showSkill, setShowSkill] = useState(false);
+  const [showTag, setShowTag] = useState(false);
   const getIconTag = (title: string): ReactElement | null => {
     switch (title) {
       case "React":
@@ -64,13 +64,13 @@ const TagSkill: FC<TagSkillProp> = ({
 
   return (
     <div
-      onMouseEnter={() => setShowSkill(true)}
-      onMouseLeave={() => setShowSkill(false)}
+      onMouseEnter={() => setShowTag(true)}
+      onMouseLeave={() => setShowTag(false)}
       className={`flex items-center gap-1 font-normal text-[.7rem] sm:text-[.8rem] lg:text-[.9rem] border-t-[3px] border-t-bondiBlue-800 rounded-full p-2 ${classTag}`}
     >
       {iconTag}
       {children}
-      {showSkill || show ? (
+      {showTag || show ? (
         <p className="h-auto opacity-100 transition-all duration-700">
           {title}
         </p>
@@ -80,4 +80,4 @@ const TagSkill: FC<TagSkillProp> = ({
     </div>
   );
 };
-export default TagSkill;
+export default TagTech;

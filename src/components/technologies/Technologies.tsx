@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { useControlDisplay } from "@/context/ControlDisplay";
-import { skills } from "@/data/information/skills";
-import TagSkill from "./TagSkill";
+import { stackTech } from "@/data/information/stack.tech";
+import TagTech from "./TagTech";
 
-
-const Skills = () => {
+const Technologies = () => {
   const { windowWidth } = useControlDisplay();
   return (
     <article className="w-full px-4 sm:px-10" id="skill">
@@ -13,10 +12,10 @@ const Skills = () => {
         Habilidades
       </h2>
       <section className="w-full flex flex-wrap gap-5 justify-center">
-        {skills.map((item, index) => {
+        {stackTech.map((item, index) => {
           return (
             <div className="cursor-pointer" key={index}>
-              <TagSkill
+              <TagTech
                 title={item}
                 sizeImg={windowWidth < 640 ? "4rem" : "5.5rem"}
                 classTag="text-bondiBlue-40 flex-col items-center"
@@ -29,4 +28,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Technologies;

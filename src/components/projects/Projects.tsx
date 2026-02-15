@@ -8,7 +8,7 @@ import {
   heroes,
   pokemon,
 } from "@/data/information/proyects";
-import TagSkill from "../skills/TagSkill";
+import TagSkill from "../technologies/TagTech";
 
 const Projects = () => {
   return (
