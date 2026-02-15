@@ -3,12 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AboutMe from "../aboutMe/AboutMe";
-import Skills from "../technologies/Technologies";
-import Projects from "../projects/Projects";
 import Contact from "../form/Contact";
 import Footer from "@/components/main/Footer";
 import BackgroundBalls from "../backgrounds/BackgroundBalls";
 import DisplayNavBar from "../navBar/DisplayNavBar";
+import Technologies from "../technologies/Technologies";
+import ProjectsGrid from "../projects/ProjectsGrid";
+
 
 const Landing = () => {
   return (
@@ -41,7 +42,7 @@ const Landing = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
-          <Projects />
+          <ProjectsGrid />
         </motion.div>
 
         <motion.div
@@ -51,7 +52,7 @@ const Landing = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
-          <Skills />
+          <Technologies />
         </motion.div>
 
         <motion.div

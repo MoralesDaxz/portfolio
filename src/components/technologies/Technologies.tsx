@@ -9,7 +9,7 @@ const Technologies = () => {
   return (
     <article className="w-full px-4 sm:px-10" id="skill">
       <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem] ">
-        Habilidades
+        Tecnologías
       </h2>
       <section className="w-full flex flex-wrap gap-5 justify-center">
         {stackTech.map((item, index) => {

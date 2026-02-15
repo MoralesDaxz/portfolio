@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC, ReactNode } from "react";
 
-interface CardProjectProp  {
+interface ProjectCardProp  {
   ruteProject: string;
   title: string;
   srcImg: string;
@@ -10,7 +10,7 @@ interface CardProjectProp  {
   prf: string;
   children: ReactNode;
 };
-const CardProject: FC<CardProjectProp> = ({
+const ProjectCard: FC<ProjectCardProp> = ({
   ruteProject,
   title,
   srcImg,
@@ -49,4 +49,4 @@ const CardProject: FC<CardProjectProp> = ({
   );
 };
 
-export default CardProject;
+export default ProjectCard;
