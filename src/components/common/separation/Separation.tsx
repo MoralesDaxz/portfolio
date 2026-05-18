@@ -1,12 +1,12 @@
 import { useControlDisplay } from "@/context/ControlDisplay";
 
 export const Separation = () => {
-  const { windowScroll } = useControlDisplay();
-  if (windowScroll > 10) return;
+  const { windowScroll, windowWidth } = useControlDisplay();
+  if (windowScroll > 10 || windowWidth <= 450) return;
 
   return (
     <>
-      <div className="w-full relative mt-[6rem] transition-all duration-500">
+      <div className="w-full absolute bottom-0 mt-[6rem] transition-all duration-500">
         <div className="custom-shape-divider-bottom-1779098290 ">
           <svg
             data-name="Layer 1"

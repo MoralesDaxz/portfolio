@@ -6,11 +6,11 @@ import { Separation } from "../common/separation/Separation";
 
 const AboutMe = () => {
   return (
-    <article id="init" className="relative w-full ">
-      <div className="relative flex flex-col justify-between min-h-[100dvh]">
-        <section className="relative flex flex-col items-center mt-[5rem] gap-[7%] sm:flex sm:flex-row sm:mt-[7rem] px-4 sm:px-10">
+    <article id="init" className="relative w-full">
+      <div className="relative flex flex-col justify-center min-h-[100dvh]">
+        <section className="relative flex flex-col items-center mt-[5rem] gap-[7%] sm:flex sm:flex-row sm:justify-center px-4 sm:px-10">
           <article className="relative w-full h-full sm:w-[50%] flex flex-col items-center justify-center gap-2 md:gap-6 lg:gap-8">
-            <h1 className="w-full text-center font-bold text-4xl my-5 sm:my-0 sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3.2rem] text-bondiBlue-400">
+            <h1 className="w-full text-center font-bold text-4xl mb-5 sm:my-0 sm:text-[2.6rem] md:text-[2.8rem] lg:text-[3.2rem] text-bondiBlue-400">
               Desarrollador Web
             </h1>
             <PictureHero />

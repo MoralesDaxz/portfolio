@@ -12,7 +12,7 @@ interface ProjectsData {
   stackTech: string[];
 }
 const ProjectsGrid = () => {
-  const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem]"
+  const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[1.5rem] pb-[3rem]"
   return (
     <article className="w-full px-4 sm:px-10" id="proyectos">
       <section

@@ -24,7 +24,7 @@ const SideModal: FC<SideBarProps> = ({ route, windowScroll }) => {
   return (
     <>
       {windowScroll < 470 ? null : windowScroll > 470 && isActive ? (
-        <div className="sideModal py-2 fixed z-50 w-[120px] h-[250px] font-light left-[2px] top-[35%] flex flex-col justify-center items-start gap-2 transition-all duration-500">
+        <div className="sideModal py-2 fixed z-50 w-[160px] h-[250px] font-light left-[2px] top-[35%] flex flex-col justify-center items-start gap-2 transition-all duration-500">
           <HiDotsVertical
             color="#0398b7"
             className="absolute z-60 top-[45%] right-0 w-5 h-7"
