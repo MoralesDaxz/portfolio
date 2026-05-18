@@ -8,6 +8,8 @@ export const stackTech = [
   "Tailwind",
   "Postman",
   "GitHub",
+  "Vitest",
+  "Jest",
   "Libraries",
 ];
 

@@ -41,7 +41,7 @@ const ProjectCard: FC<ProjectCardProp> = ({
         <p className=" text-bondiBlue-40 font-extralight text-[.9rem] sm:text-[1rem] lg:text-[1.1rem] h-[120px] overflow-y-auto w-[85%] lg:w-[70%] border-b-2 border-b-bondiBlue-800 py-2">
           {prf}
         </p>
-        <div className="w-full flex flex-wrap justify-center gap-2">
+        <div className="w-full lg:w-[75%] flex flex-wrap justify-center gap-2">
           {children}
         </div>
       </Link>

@@ -5,10 +5,11 @@ import FormSent from "./ModalFormSent";
 
 const Contact = () => {
   const [registered, setRegistered] = useState(false);
+  const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem]"
   return (
     <article className="w-full px-4 sm:px-10" id="contact">
       <section className="w-full flex flex-col items-center pb-4 px-5">
-        <h2 className="w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem]">
+        <h2 className={titleStyle}>
           Contactame
         </h2>
         <div className="w-full flex flex-col items-center">

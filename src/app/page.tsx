@@ -1,10 +1,10 @@
 
 import React from "react";
-import Landing from "@/components/main/Landing";
+import Landing from "@/components/Landing";
 
 const Home = () => {
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-[100dvh]">
       <Landing />
     </main>
   );

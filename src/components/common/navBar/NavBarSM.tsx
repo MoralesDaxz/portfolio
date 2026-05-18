@@ -7,11 +7,11 @@ import Image from "next/image";
 import { useControlDisplay } from "@/context/ControlDisplay";
 import SideModal from "./SideModal";
 interface NavBarProps {
-  windowScroll: number;
+
   route: { link: string; title: string }[];
 }
-const NavBarSM:FC<NavBarProps> = ({route, windowScroll}) => {
-  const { closeModal, setCloseModal } = useControlDisplay();
+const NavBarSM:FC<NavBarProps> = ({route}) => {
+  const { closeModal, setCloseModal, windowScroll } = useControlDisplay();
   const [chooseLink, setChooseLink] = useState("");
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -28,7 +28,7 @@ const NavBarSM:FC<NavBarProps> = ({route, windowScroll}) => {
     <>
     <SideModal windowScroll={windowScroll} route={route} />
       {closeModal ? (
-        <div className="w-full absolute top-0 flex items-center justify-between py-5 px-5">
+        <div className="w-full absolute top-0 flex items-center justify-between py-4 px-5">
           <Link className="z-10" href={"/"}>
             <Image
               priority

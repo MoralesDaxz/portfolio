@@ -1,13 +1,16 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useControlDisplay } from "@/context/ControlDisplay";
+
 interface NavBarProps {
-  windowScroll: number;
+
   route: { link: string; title: string }[];
 }
-const NavBarMD: FC<NavBarProps> = ({ windowScroll, route }) => {
+const NavBarMD: FC<NavBarProps> = ( {route }) => {
+  const {windowScroll} = useControlDisplay()
   const styleMD =
-    "z-10 w-full fixed top-0 py-3 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-300";
+    "z-10 w-full fixed top-0 py-3 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500";
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -15,11 +18,12 @@ const NavBarMD: FC<NavBarProps> = ({ windowScroll, route }) => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  if(windowScroll <=10 ) return
   return (
     <div
       className={
         windowScroll > 40
-          ? `${styleMD} z-20 bg-[#02171fc2] py-4 backdrop-blur-md `
+          ? `${styleMD} z-20 bg-[#032431bd] py-4 backdrop-blur-sm rounded-b-[20px]`
           : styleMD
       }
     >

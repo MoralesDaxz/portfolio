@@ -19,9 +19,9 @@ const DisplayNavBar = () => {
   return (
     <>
       {windowWidth > 640 ? (
-        <NavBarMD windowScroll={windowScroll} route={route} />
+        <NavBarMD route={route} />
       ) : windowWidth < 640 ? (
-        <NavBarSM windowScroll={windowScroll} route={route} />
+        <NavBarSM  route={route} />
       ) : null}
     </>
   );

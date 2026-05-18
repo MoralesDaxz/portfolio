@@ -8,11 +8,11 @@ const TypeLetters = () => {
         sequence={[
           "Piensa en lo que quieres lograr",
           2000,
-          "Desarrolla con pasion lo que imaginas ",
+          "Desarrolla con pasión lo que imaginas",
           2000,
-          "Perfecciona e implementa en cada paso",
+          "Implementa y mejora en cada paso",
           2000,
-          "Disfruta tus logros, es tú momento!",
+          "¡Disfruta tus logros, es tu momento!",
           2000,
         ]}
         speed={60}

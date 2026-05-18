@@ -128,3 +128,26 @@ body {
     transform: translate(-50%, -100%) scale(0)
   }
 }
+/* Separation */
+.custom-shape-divider-bottom-1779098290 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+}
+
+.custom-shape-divider-bottom-1779098290 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 56px;
+
+}
+
+.custom-shape-divider-bottom-1779098290 .shape-fill {
+    fill: #1cdbf4de;
+
+}

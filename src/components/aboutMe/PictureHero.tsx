@@ -10,49 +10,52 @@ import { MdClose } from "react-icons/md";
 import { HiDownload } from "react-icons/hi";
 
 const PictureHero = () => {
-  const [modalPic, setModalPic] = useState(false);
+  const [modalPic, setModalPic] = useState(true);
   const [modalPdf, setModalPdf] = useState(false);
 
-  const modalClass =
+  
+    const linkStyle = "p-1 w-full border-b-2 border-b-transparent hover:border-bondiBlue-500 transition-all duration-700"
+    const iconStyle="h-[25px] w-full opacity-40 hover:opacity-100 transition-all duration-300"
+/* const modalClass =
     "pictureModal transition-all duration-700 absolute top-[12%] sm:top-[15%] lg:top-[18%] left-2 md:left-[5%] lg:left-[10%] h-[150px] w-[80px] flex flex-col items-center justify-around";
-
+ */
   return (
-    <div>
+    <div className="flex flex-col items-center gap-4">
       <Image
-        onClick={() => setModalPic(!modalPic)}
+  
         src={pic}
         width={0}
         height={0}
         alt="pic"
-        className="cursor-pointer w-[150px] rounded-full shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 hover:scale-105 transition-all duration-300"
+        className="w-[150px] rounded-[25px] shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 0"
       />
       <div
-        className={modalPic ? modalClass : `${modalClass} opacity-0 w-[0px]`}
+        className="pictureModal transition-all duration-700 p-1 flex gap-6 items-center justify-around"
       >
         <Link
-          className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700"
+          className={linkStyle}
           href={"https://github.com/MoralesDaxz"}
           title="GitHub"
           target="_blank"
         >
-          <FaGithub className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
+          <FaGithub className={iconStyle}/>
         </Link>
         <Link
-          className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700"
+         className={linkStyle}
           href={
-            "https://www.linkedin.com/in/alfredo-jose-morales-ramirez-6b664b1a7/"
+            "https://www.linkedin.com/in/ajmoralesr/"
           }
           title="Linkedin"
           target="_blank"
         >
-          <FaLinkedin className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
+          <FaLinkedin className={iconStyle}/>
         </Link>
         <button
           onClick={() => setModalPdf(true)}
-          className="w-full border-l-2 border-l-transparent hover:border-bondiBlue-500 transition-all duration-700 cursor-pointer"
+         className={linkStyle}
           title="Curriculum"
         >
-          <IoDocumentAttach className="h-[30px] w-full opacity-70 hover:opacity-100 transition-all duration-300" />
+          <IoDocumentAttach className={iconStyle} />
         </button>
       </div>
 

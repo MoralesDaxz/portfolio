@@ -1,7 +1,7 @@
 "use client";
 import React, { FC, ReactElement, useState } from "react";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiJest, SiTailwindcss, SiVitest } from "react-icons/si";
 import { FaGear } from "react-icons/fa6";
 import { DiJavascript } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
@@ -51,6 +51,10 @@ const TagTech: FC<TagTechProp> = ({
         return <TbBrandNextjs size={sizeImg} color="#FFFFFF" />;
       case "Library":
         return <MdLibraryAdd size={sizeImg} color="#94A3B8" />;
+        case "Jest":
+        return <SiJest size={sizeImg} color="#c21324" />;
+        case "Vitest":
+        return <SiVitest size={sizeImg} color="#22fa7d" />;
       case "Libraries":
         return <MdLibraryAdd size={sizeImg} color="#94A3B8" />;
       default:
