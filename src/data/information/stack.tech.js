@@ -10,6 +10,7 @@ export const stackTech = [
   "GitHub",
   "Vitest",
   "Jest",
+  "Java",
   "Libraries",
 ];
 

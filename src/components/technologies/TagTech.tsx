@@ -11,6 +11,7 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
+import { FaJava } from "react-icons/fa6";
 interface TagTechProp  {
   title: string;
   classTag?: string;
@@ -51,6 +52,8 @@ const TagTech: FC<TagTechProp> = ({
         return <TbBrandNextjs size={sizeImg} color="#FFFFFF" />;
       case "Library":
         return <MdLibraryAdd size={sizeImg} color="#94A3B8" />;
+        case "Java":
+        return <FaJava size={sizeImg} color="#FFFFFF" />;
         case "Jest":
         return <SiJest size={sizeImg} color="#c21324" />;
         case "Vitest":

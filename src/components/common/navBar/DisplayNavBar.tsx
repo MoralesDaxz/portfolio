@@ -10,7 +10,7 @@ const DisplayNavBar = () => {
     { link: "skill", title: "Habilidades" },
     { link: "contact", title: "Contacto" },
   ];
-  const { windowWidth, windowScroll } = useControlDisplay();
+  const { windowWidth } = useControlDisplay();
   useEffect(() => {
     return () => {
       windowWidth;

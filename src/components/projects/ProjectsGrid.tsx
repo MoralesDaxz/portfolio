@@ -14,10 +14,9 @@ interface ProjectsData {
 const ProjectsGrid = () => {
   const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] sm:pt-[1.5rem]  pb-[3rem]"
   return (
-    <article className="w-full px-4 sm:px-10" id="proyectos">
+    <article className="w-full px-4 sm:px-10"  id="projects">
       <section
         className="w-full min-h-screen flex flex-col items-center mb-7"
-        id="projects"
       >
         <h2 className={titleStyle}>
           Proyectos Desarrollados

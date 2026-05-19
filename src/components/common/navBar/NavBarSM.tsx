@@ -1,24 +1,28 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import menu from "@/assets/icons/menu.svg";
 import close from "@/assets/icons/close.svg";
 import Image from "next/image";
 import { useControlDisplay } from "@/context/ControlDisplay";
 import SideModal from "./SideModal";
 interface NavBarProps {
-
   route: { link: string; title: string }[];
 }
-const NavBarSM:FC<NavBarProps> = ({route}) => {
+const NavBarSM: FC<NavBarProps> = ({ route }) => {
   const { closeModal, setCloseModal, windowScroll } = useControlDisplay();
   const [chooseLink, setChooseLink] = useState("");
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setChooseLink(id);
     }
   };
+  useEffect(() => {
+   
+    return () => {};
+  }, [windowScroll]);
 
   const styleSM =
     "gradientNavBarMovil absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
@@ -26,7 +30,12 @@ const NavBarSM:FC<NavBarProps> = ({route}) => {
     "text-2xl font-light text-[white] opacity-80 hover:opacity-100 ";
   return (
     <>
-    <SideModal windowScroll={windowScroll} route={route} />
+      <SideModal
+        windowScroll={windowScroll}
+        route={route}
+        setChooseLink={setChooseLink}
+        chooseLink={chooseLink}
+      />
       {closeModal ? (
         <div className="w-full absolute top-0 flex items-center justify-between py-4 px-5">
           <Link className="z-10" href={"/"}>
@@ -67,17 +76,16 @@ const NavBarSM:FC<NavBarProps> = ({route}) => {
             return (
               <button
                 onClick={() => {
-                  setChooseLink(item.title);
+                  setChooseLink(item.link);
                   setCloseModal(true);
                   scrollToSection(item.link);
                 }}
                 className={
-                  chooseLink == item.title
+                  chooseLink == item.link
                     ? classLinkActive + " text-bondiBlue-400 font-normal"
                     : classLinkActive
                 }
                 key={index}
-                
               >
                 {item.title}
               </button>
@@ -89,4 +97,4 @@ const NavBarSM:FC<NavBarProps> = ({route}) => {
   );
 };
 
-export default NavBarSM ;
+export default NavBarSM;

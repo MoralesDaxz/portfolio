@@ -1,13 +1,26 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { FaAngleUp } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { HiDotsVertical } from "react-icons/hi";
 interface SideBarProps {
   windowScroll: number;
   route: { link: string; title: string }[];
+  chooseLink: string;
+  setChooseLink: Dispatch<SetStateAction<string>>;
 }
-const SideModal: FC<SideBarProps> = ({ route, windowScroll }) => {
+const SideModal: FC<SideBarProps> = ({
+  route,
+  windowScroll,
+  chooseLink,
+  setChooseLink,
+}) => {
   const [isActive, setisActive] = useState(false);
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -19,6 +32,7 @@ const SideModal: FC<SideBarProps> = ({ route, windowScroll }) => {
     if (windowScroll < 470) {
       setisActive(false);
     }
+
     return () => {};
   }, [windowScroll]);
   return (
@@ -33,21 +47,31 @@ const SideModal: FC<SideBarProps> = ({ route, windowScroll }) => {
           <FaAngleUp color="#0398b7" className="w-4 h-4 ml-[2px]" />
           <div
             className="flex self-start items-center gap-2"
-            onClick={() => scrollToSection("init")}
+            onClick={() => {
+              scrollToSection("init");
+              setChooseLink("init");
+            }}
           >
-            <div className="rounded-full ml-1 w-3 h-3 bg-bondiBlue-400"></div>
+            <div
+              className={`rounded-full ml-1 w-3 h-3 ${chooseLink === "init" ? "bg-bondiBlue-400":"bg-gray-400"}`}
+            ></div>
             <p className="font-thin">Inicio</p>
           </div>
           {route.map((item, index) => {
             return (
               <>
-                <div className="h-8 w-[2px] ml-2 bg-bondiBlue-900"></div>
+                <div className="h-8 w-[2px] ml-2 bg-bondiBlue-900"/>
                 <div
                   className=" flex self-start items-center gap-2"
                   key={index}
-                  onClick={() => scrollToSection(item.link)}
+                  onClick={() => {
+                    scrollToSection(item.link);
+                    setChooseLink(item.link);
+                    console.log(chooseLink);
+                    
+                  }}
                 >
-                  <div className="rounded-full ml-1 w-3 h-3 bg-bondiBlue-400"></div>
+                  <div className={`rounded-full ml-1 w-3 h-3 ${chooseLink === item.link ? "bg-bondiBlue-400":"bg-gray-400"}`}/>
                   <p className="font-thin">{item.title}</p>
                 </div>
               </>

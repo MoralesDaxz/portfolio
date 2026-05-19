@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useControlDisplay } from "@/context/ControlDisplay";
 
 interface NavBarProps {
-
   route: { link: string; title: string }[];
 }
 const NavBarMD: FC<NavBarProps> = ( {route }) => {
