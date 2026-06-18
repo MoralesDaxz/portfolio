@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import pic from "@/assets/picture/Morales.jpg";
+import pic from "@/assets/picture/Morales.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoDocumentAttach } from "react-icons/io5";

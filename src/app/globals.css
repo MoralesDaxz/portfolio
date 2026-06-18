@@ -137,6 +137,7 @@ body {
     overflow: hidden;
     line-height: 0;
 
+
 }
 
 .custom-shape-divider-bottom-1779098290 svg {
@@ -144,10 +145,13 @@ body {
     display: block;
     width: calc(100% + 1.3px);
     height: 56px;
+     
 
 }
 
 .custom-shape-divider-bottom-1779098290 .shape-fill {
-    fill: #1cdbf4de;
+    fill: #054d5793;
+   
+filter: blur(6px);
 
 }
