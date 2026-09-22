@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, ReactNode, useState } from "react";
+import  { FC, ReactNode, useState } from "react";
 import TabLink from "./TabLink";
 import { infoTab } from "@/data/sidebar/examples";
 type Props = {

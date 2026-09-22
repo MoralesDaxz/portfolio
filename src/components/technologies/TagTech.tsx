@@ -1,7 +1,7 @@
 "use client";
-import React, { FC, ReactElement, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import { FaReact } from "react-icons/fa";
-import { SiJest, SiTailwindcss, SiVitest } from "react-icons/si";
+import { SiJest, SiSupabase, SiTailwindcss, SiVitest } from "react-icons/si";
 import { FaGear } from "react-icons/fa6";
 import { DiJavascript } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
@@ -12,20 +12,20 @@ import { SiPostman } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaJava } from "react-icons/fa6";
-interface TagTechProp  {
+interface TagTechProp {
   title: string;
   classTag?: string;
   children?: ReactElement;
   sizeImg?: string;
   show?: boolean;
-};
+}
 
 const TagTech: FC<TagTechProp> = ({
   title,
   classTag,
   children,
   show,
-  sizeImg="1.5rem",
+  sizeImg = "1.5rem",
 }) => {
   const [showTag, setShowTag] = useState(false);
   const getIconTag = (title: string): ReactElement | null => {
@@ -44,6 +44,8 @@ const TagTech: FC<TagTechProp> = ({
         return <DiCss3 size={sizeImg} color="#0068BA" />;
       case "Typescript":
         return <TbBrandTypescript size={sizeImg} color="#2F74C0" />;
+      case "Supabase":
+        return <SiSupabase size={sizeImg} color="#3ECF8E" />;
       case "Postman":
         return <SiPostman size={sizeImg} color="#FF6C37" />;
       case "GitHub":
@@ -52,11 +54,11 @@ const TagTech: FC<TagTechProp> = ({
         return <TbBrandNextjs size={sizeImg} color="#FFFFFF" />;
       case "Library":
         return <MdLibraryAdd size={sizeImg} color="#94A3B8" />;
-        case "Java":
+      case "Java":
         return <FaJava size={sizeImg} color="#FFFFFF" />;
-        case "Jest":
+      case "Jest":
         return <SiJest size={sizeImg} color="#c21324" />;
-        case "Vitest":
+      case "Vitest":
         return <SiVitest size={sizeImg} color="#22fa7d" />;
       case "Libraries":
         return <MdLibraryAdd size={sizeImg} color="#94A3B8" />;
@@ -66,7 +68,7 @@ const TagTech: FC<TagTechProp> = ({
   };
 
   const [iconTag, setIconTag] = useState<ReactElement | null>(
-    getIconTag(title)
+    getIconTag(title),
   );
 
   return (

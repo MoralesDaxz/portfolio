@@ -1,6 +1,4 @@
 "use client";
-
-import React from "react";
 import { motion } from "framer-motion";
 import AboutMe from "./aboutMe/AboutMe";
 import Contact from "./contact/Contact";
@@ -9,7 +7,6 @@ import BackgroundBalls from "./common/backgrounds/BackgroundBalls";
 import DisplayNavBar from "./common/navBar/DisplayNavBar";
 import Technologies from "./technologies/Technologies";
 import ProjectsGrid from "./projects/ProjectsGrid";
-import { Separation } from "./common/separation/Separation";
 import ToTop from "./common/toTop/ToTop";
 
 const Landing = () => {

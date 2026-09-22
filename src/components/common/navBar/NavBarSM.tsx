@@ -1,16 +1,17 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import menu from "@/assets/icons/menu.svg";
 import close from "@/assets/icons/close.svg";
 import Image from "next/image";
 import { useControlDisplay } from "@/context/ControlDisplay";
 import SideModal from "./SideModal";
+
 interface NavBarProps {
   route: { link: string; title: string }[];
 }
 const NavBarSM: FC<NavBarProps> = ({ route }) => {
-  const { closeModal, setCloseModal, windowScroll } = useControlDisplay();
+  const { closeModal, setCloseModal } = useControlDisplay();
   const [chooseLink, setChooseLink] = useState("");
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -19,10 +20,6 @@ const NavBarSM: FC<NavBarProps> = ({ route }) => {
       setChooseLink(id);
     }
   };
-  useEffect(() => {
-   
-    return () => {};
-  }, [windowScroll]);
 
   const styleSM =
     "gradientNavBarMovil absolute text-bondiBlue-50 w-full z-20 h-screen top-0 flex flex-col justify-around items-center gap-4 py-3 px-3 ";
@@ -31,7 +28,6 @@ const NavBarSM: FC<NavBarProps> = ({ route }) => {
   return (
     <>
       <SideModal
-        windowScroll={windowScroll}
         route={route}
         setChooseLink={setChooseLink}
         chooseLink={chooseLink}

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import pic from "@/assets/picture/Morales.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -10,15 +10,11 @@ import { MdClose } from "react-icons/md";
 import { HiDownload } from "react-icons/hi";
 
 const PictureHero = () => {
-  const [modalPic, setModalPic] = useState(true);
   const [modalPdf, setModalPdf] = useState(false);
-
   
     const linkStyle = "p-1 w-full border-b-2 border-b-transparent hover:border-bondiBlue-500 transition-all duration-700"
     const iconStyle="h-[25px] w-full opacity-40 hover:opacity-100 transition-all duration-300"
-/* const modalClass =
-    "pictureModal transition-all duration-700 absolute top-[12%] sm:top-[15%] lg:top-[18%] left-2 md:left-[5%] lg:left-[10%] h-[150px] w-[80px] flex flex-col items-center justify-around";
- */
+
   return (
     <div className="flex flex-col items-center gap-4">
       <Image
@@ -27,10 +23,10 @@ const PictureHero = () => {
         width={0}
         height={0}
         alt="pic"
-        className="w-[150px] rounded-[25px] shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900 0"
+        className="w-[120px] rounded-[25px] shadow-lg shadow-bondiBlue-400 border-4 border-bondiBlue-900"
       />
       <div
-        className="pictureModal transition-all duration-700 p-1 flex gap-6 items-center justify-around"
+        className="transition-all duration-700 p-1 flex gap-6 items-center justify-around"
       >
         <Link
           className={linkStyle}
@@ -59,7 +55,7 @@ const PictureHero = () => {
         </button>
       </div>
 
-      {/* PDF Modal */}
+
       {modalPdf && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
@@ -75,8 +71,8 @@ const PictureHero = () => {
               <h2 className="text-xl font-semibold text-gray-800">Curriculum</h2>
               <div className="flex gap-2">
                 <a
-                  href="/curriculum/Alfredo Morales - Madrid.pdf"
-                  download="Alfredo Morales - Madrid.pdf"
+                  href="/curriculum/Alfredo_Morales.pdf"
+                  download="Alfredo_Morales.pdf"
                   className="flex items-center gap-2 px-4 py-2 bg-bondiBlue-500 text-white rounded-lg hover:bg-bondiBlue-600 transition-all duration-300"
                   title="Descargar PDF"
                 >
@@ -95,7 +91,7 @@ const PictureHero = () => {
 
             {/* PDF Viewer */}
             <iframe
-              src="/curriculum/Alfredo Morales - Madrid.pdf"
+              src="/curriculum/Alfredo_Morales.pdf"
               className="flex-1 w-full"
               title="PDF Viewer"
             />

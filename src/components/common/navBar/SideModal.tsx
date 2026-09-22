@@ -1,23 +1,17 @@
 "use client";
-import React, {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useState,
-} from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { HiDotsVertical } from "react-icons/hi";
+import { useScrollY } from "../../../../hooks/ControlDisplay/useScrollY";
 interface SideBarProps {
-  windowScroll: number;
   route: { link: string; title: string }[];
   chooseLink: string;
   setChooseLink: Dispatch<SetStateAction<string>>;
 }
 const SideModal: FC<SideBarProps> = ({
   route,
-  windowScroll,
+
   chooseLink,
   setChooseLink,
 }) => {
@@ -28,13 +22,8 @@ const SideModal: FC<SideBarProps> = ({
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  useEffect(() => {
-    if (windowScroll < 470) {
-      setisActive(false);
-    }
+  const windowScroll = useScrollY();
 
-    return () => {};
-  }, [windowScroll]);
   return (
     <>
       {windowScroll < 470 ? null : windowScroll > 470 && isActive ? (
@@ -53,14 +42,14 @@ const SideModal: FC<SideBarProps> = ({
             }}
           >
             <div
-              className={`rounded-full ml-1 w-3 h-3 ${chooseLink === "init" ? "bg-bondiBlue-400":"bg-gray-400"}`}
+              className={`rounded-full ml-1 w-3 h-3 ${chooseLink === "init" ? "bg-bondiBlue-400" : "bg-gray-400"}`}
             ></div>
             <p className="font-thin">Inicio</p>
           </div>
           {route.map((item, index) => {
             return (
-              <>
-                <div className="h-8 w-[2px] ml-2 bg-bondiBlue-900"/>
+              <article key={item.title}>
+                <div className="h-8 w-[2px] ml-2 bg-bondiBlue-900" />
                 <div
                   className=" flex self-start items-center gap-2"
                   key={index}
@@ -68,13 +57,14 @@ const SideModal: FC<SideBarProps> = ({
                     scrollToSection(item.link);
                     setChooseLink(item.link);
                     console.log(chooseLink);
-                    
                   }}
                 >
-                  <div className={`rounded-full ml-1 w-3 h-3 ${chooseLink === item.link ? "bg-bondiBlue-400":"bg-gray-400"}`}/>
+                  <div
+                    className={`rounded-full ml-1 w-3 h-3 ${chooseLink === item.link ? "bg-bondiBlue-400" : "bg-gray-400"}`}
+                  />
                   <p className="font-thin">{item.title}</p>
                 </div>
-              </>
+              </article>
             );
           })}
 
