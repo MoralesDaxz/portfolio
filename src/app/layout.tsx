@@ -17,12 +17,16 @@ export default function RootLayout({
           type="image/png"
           href="https://i.ibb.co/54ktrkM/portfolio-Icon.png"
         />
-        <meta name="description" content="Desarrollador Web - Frontend." />
+        <meta name="google-site-verification" content="l_o-q6Oqp8QKB-_I1UKMVCmvYGT235g3Jxiemo7cVCs" />
+        <meta
+          name="description"
+          content="Frontend Developer con experiencia en soporte IT y proyectos con React, Next.js, TypeScript y diseño web moderno."
+        />
         <meta property="og:url" content="https://morales-dev.vercel.app/" />
-        <meta property="og:title" content="Alfredo Morales - Developer" />
+        <meta property="og:title" content="Alfredo Morales | Frontend Developer" />
         <meta
           property="og:description"
-          content="Soy Alfredo Morales, presentación de mi portafolio web, proyectos y entornos prácticos desarrollados."
+          content="Portfolio personal de Alfredo Morales: desarrollador frontend con experiencia en soporte IT, proyectos con React y Next.js, y soluciones web modernas y funcionales."
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_ES" />

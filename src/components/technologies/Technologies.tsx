@@ -1,17 +1,16 @@
 "use client";
-import React from "react";
-import { useControlDisplay } from "@/context/ControlDisplay";
+
 import { stackTech } from "@/data/information/stack.tech";
 import TagTech from "./TagTech";
+import { useWindowWidth } from "../../../hooks/ControlDisplay/useWindowWidth";
 
 const Technologies = () => {
-  const { windowWidth } = useControlDisplay();
-  const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem]"
+  const windowWidth = useWindowWidth();
+  const titleStyle =
+    "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[5.5rem] pb-[3rem]";
   return (
     <article className="w-full px-4 sm:px-10" id="skill">
-      <h2 className={titleStyle}>
-        Tecnologías
-      </h2>
+      <h2 className={titleStyle}>Tecnologías</h2>
       <section className="w-full max-w-3xl mx-auto flex flex-wrap gap-5 justify-center">
         {stackTech.map((item, index) => {
           return (

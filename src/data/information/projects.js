@@ -1,40 +1,40 @@
 export const projects = [
   {
     title: "Pokemon Store",
-    prf: "El proyecto se ha desarrollado utilizando HTML, CSS y JavaScript. Se ha manipulado el localStorage para el carrito de la compra, y se ha hecho uso de DOM en su mayoría.",
-    img: "https://i.ibb.co/7y64V52/pokemon.png",
+    prf: "E-commerce temático de Pokémon construido con HTML5, CSS3 y JavaScript Vanilla. Consume una API externa e integra la manipulación nativa del DOM y LocalStorage para gestionar el carrito de compras. Proyecto inicial que marca el punto de partida en mi trayectoria como desarrollador Frontend.",
+    img: "/images/projects/pokemon.webp",
     alt: "pokemon",
     url: "https://pokemonsstore.netlify.app/index.html",
     stackTech: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "Global Logistic",
+    prf: "Plataforma web de servicios de logística y paquetería desarrollada como proyecto final de Desarrollo Web. Implementa React, Tailwind CSS, React Hook Form y ReactToPrint para optimizar la gestión de datos, validación de formularios y la generación o impresión de comprobantes de envío.",
+    img: "/images/projects/globallogistic.webp",
+    alt: "global_logistic",
+    url: "https://global-logistic-final.vercel.app/",
+    stackTech: ["React", "Tailwind", "Library"],
+  },
+  {
     title: "GTServicios",
-    prf: "Proyecto realizado en NextJS, librerías (Carousel, Form) para cliente de empresa logística, paquetería y servicios.",
-    img: "https://i.ibb.co/Fs5bYCW/gtservicios.jpg",
+    prf: "Landing page desarrollada en Next.js para una empresa de servicios de logística y paquetería. Diseñada para captar clientes mediante formularios integrados y carruseles dinámicos, destacando por su rendimiento, carga rápida y una experiencia de usuario clara y profesional.",
+    img: "/images/projects/gtservicios.webp",
     alt: "gts",
     url: "https://gtservicios.vercel.app/",
     stackTech: ["NextJS", "Typescript", "Tailwind", "Library"],
   },
   {
     title: "Cafe con Aroma",
-    prf: "Página creada implementando React, API, Tailwind, CSS, Librerías, a partir de boceto en Figma a peticion de cliente (empresa comercializadora de café). Proyecto presentado como evaluación de conocimientos adquiridos en formación práctica de GammaTech School.",
-    img: "https://i.ibb.co/VJTgNjV/cafeconaroma.png",
+    prf: "Web para comercializadora de café maquetada desde un diseño en Figma con React, Tailwind CSS y consumo de APIs. Proyecto de evaluación Frontend en GammaTech School orientado a transformar requerimientos de cliente en una interfaz moderna, responsiva y funcional.",
+    img: "/images/projects/cafeconaroma.webp",
     alt: "cafe_aroma",
     url: "https://cafeconaroma.vercel.app/",
     stackTech: ["React", "Api", "Tailwind", "Library"],
   },
   {
-    title: "Global Logistic",
-    prf: "Página basada en empresa, servicio de transporte y paquetería, presentada como proyecto final de curso Desarrollo Web, implementando React, Tailwind, CSS, UseForm, ReactToPrint, ReactIcons, entre otras librerías.",
-    img: "https://i.ibb.co/n7GNGTB/globallogistic.png",
-    alt: "global_logistic",
-    url: "https://global-logistic-final.vercel.app/",
-    stackTech: ["React", "Tailwind", "Library"],
-  },
-  {
     title: "AdoptaUnJunior",
-    prf: "Colaboración voluntaria en el desarrollo de la página web adoptaunjunior.es. Me encargué de implementar el componente de registro, inicio de sesión y recuperación de contraseña con la biblioteca react-hook-form (useForm) y de realizar la integración con el equipo backend. También validamos los datos aportados para comprobar si ya existían en la base de datos. En el inicio de sesión, se comprueba si el usuario está registrado y si tiene el correo electrónico confirmado. Se entregaban informes semanales de las implementaciones y se mantenían reuniones de equipo para sincronizar los cambios y las nuevas implementaciones.",
-    img: "https://i.ibb.co/vhjj1zK/204338.png",
+    prf: "Colaboración en el desarrollo inicial de una plataforma comunitaria diseñada para impulsar la inserción laboral de perfiles tech junior. Diseñé e implementé el flujo completo de autenticación e identidad de usuario (registro, login, verificación por email y recuperación de clave) utilizando React y react-hook-form. Coordinación directa con el equipo backend para la validación de datos en tiempo real y participación activa en flujos de trabajo ágiles mediante entregables y sincronizaciones semanales.",
+    img: "/images/projects/auj.webp",
     alt: "adoptaunjunior",
     url: "https://adoptaunjunior.es/",
     stackTech: ["React", "Typescript", "Tailwind", "Vitest", "Library"],
@@ -42,9 +42,10 @@ export const projects = [
   {
     title: "Heroes",
     prf: "El proyecto se ha elaborado a partir del curso «React: de cero a experto». Este curso lo imparte Fernando Herrera en Udemy. El backend utilizado ha sido desarrollado en Nest.",
-    img: "https://i.ibb.co/Ng9PSQH3/heroes.png",
+    img: "/images/projects/heroes.webp",
     alt: "heroApp",
     url: "https://heroapp-react.netlify.app/",
+
     stackTech: [
       "React",
       "Typescript",
@@ -55,4 +56,21 @@ export const projects = [
       "Library",
     ],
   },
+  {
+    title: "Todo App",
+    prf: "Plataforma full-stack de gestión de tareas colaborativas (TodoOK) construida con React, TypeScript y Tailwind CSS. Utiliza Supabase para autenticación, base de datos en tiempo real mediante WebSockets y reglas de acceso RLS. Incorpora TanStack Query para gestión de estado asíncrono y persistencia offline, permitiendo compartir listas de tareas con sincronización instantánea entre usuarios.",
+    img: "/images/projects/todo.webp",
+    alt: "todoApp",
+    url: "https://todook.netlify.app/",
+
+    stackTech: [
+      "Supabase",
+      "React",
+      "Typescript",
+      "Tailwind",
+      "Vitest",
+      "Library",
+    ],
+  },
+  
 ];

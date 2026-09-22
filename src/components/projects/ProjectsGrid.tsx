@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 import TagSkill from "../technologies/TagTech";
 import { projects } from "../../data/information/projects";
@@ -12,15 +11,12 @@ interface ProjectsData {
   stackTech: string[];
 }
 const ProjectsGrid = () => {
-  const titleStyle = "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] sm:pt-[1.5rem]  pb-[3rem]"
+  const titleStyle =
+    "w-full text-center font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] text-bondiBlue-400 pt-[4.5rem] sm:pt-[1.5rem]  pb-[3rem]";
   return (
-    <article className="w-full px-4 sm:px-10"  id="projects">
-      <section
-        className="w-full min-h-screen flex flex-col items-center mb-7"
-      >
-        <h2 className={titleStyle}>
-          Proyectos Desarrollados
-        </h2>
+    <article className="w-full px-4 sm:px-10" id="projects">
+      <section className="w-full min-h-screen flex flex-col items-center mb-7">
+        <h2 className={titleStyle}>Proyectos Desarrollados</h2>
         <article className="w-full flex flex-wrap gap-y-4 sm:gap-x-3 md:gap-x-5 justify-center ">
           {projects.map((project: ProjectsData, index: number) => {
             return (
@@ -31,17 +27,16 @@ const ProjectsGrid = () => {
                 altImg={project.alt}
                 srcImg={project.img}
                 prf={project.prf}
+                priority={index === 0} // Precarga solo los 2 primeros proyectos
               >
-                {project.stackTech.map((item, index) => {
-                  return (
-                    <TagSkill
-                      classTag={"text-bondiBlue-500"}
-                      key={item}
-                      title={item}
-                      show={true}
-                    />
-                  );
-                })}
+                {project.stackTech.map((item) => (
+                  <TagSkill
+                    classTag={"text-bondiBlue-500"}
+                    key={item}
+                    title={item}
+                    show={true}
+                  />
+                ))}
               </ProjectCard>
             );
           })}

@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import  { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useControlDisplay } from "@/context/ControlDisplay";
+import { useScrollY } from "../../../../hooks/ControlDisplay/useScrollY";
 
 interface NavBarProps {
   route: { link: string; title: string }[];
 }
 const NavBarMD: FC<NavBarProps> = ( {route }) => {
-  const {windowScroll} = useControlDisplay()
+  const windowScroll = useScrollY()
   const styleMD =
     "z-10 w-full fixed top-0 py-3 flex justify-center items-start sm:gap-10 md:gap-20 transition-all duration-500";
 

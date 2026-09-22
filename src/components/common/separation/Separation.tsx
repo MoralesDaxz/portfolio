@@ -1,7 +1,10 @@
-import { useControlDisplay } from "@/context/ControlDisplay";
+
+import { useScrollY } from "../../../../hooks/ControlDisplay/useScrollY";
+import { useWindowWidth } from "../../../../hooks/ControlDisplay/useWindowWidth";
 
 export const Separation = () => {
-  const { windowScroll, windowWidth } = useControlDisplay();
+  const windowScroll = useScrollY();
+  const windowWidth = useWindowWidth();
   if (windowScroll > 10 || windowWidth <= 450) return;
 
   return (

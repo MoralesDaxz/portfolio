@@ -5,6 +5,7 @@ export const stackTech = [
   "React",
   "NextJS",
   "Typescript",
+  "Supabase",
   "Tailwind",
   "Postman",
   "GitHub",
